@@ -4,7 +4,7 @@ body, html { height: 100%; }
 
 img, fieldset, a img { border: none; }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; border-radius: 0; }
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
 
 input[type="submit"], button { cursor: pointer; }
 input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
@@ -20,9 +20,34 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+body { font-family: "Open Sans", sans-serif; font-size: 12px; line-height: 1.4; }
+
+.center { width: 980px; margin: 0 auto; }
+
+.clr { *zoom: 1; }
+.clr:after { content: " "; display: table; clear: both; }
+
+a { text-decoration: none; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.header__in { padding: 25px 0; }
+.header__in .logo { float: left; }
+.header__in .logo a { display: block; }
+.header__in .nav { float: right; padding: 27px 0; }
+.header__in .nav__menu { float: left; margin-right: 40px; }
+.header__in .nav__menu li { display: inline-block; }
+.header__in .nav__submenu { display: none; }
+.header__in .nav .lang { float: right; }
+.header__in .nav .lang a { text-transform: uppercase; font-weight: normal; }
+.header__in .nav a { display: inline-block; font-weight: bold; padding: 10px; color: white; }
+.header__in .nav a:hover { color: #ffed00; }
+
+.topper { background: radial-gradient(at top, #469e2c, #337823); color: white; }
+.topper__wrap { width: 500px; margin: 0 auto; padding: 90px 0 165px; text-align: center; }
+.topper__wrap h2 { font-weight: lighter; font-size: 36px; }
+.topper__wrap p { padding: 25px 0; font-size: 16px; }
+.topper__more a { padding: 0 15px; font-weight: bold; font-size: 14px; color: white; }
