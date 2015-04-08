@@ -1,6 +1,8 @@
 // Normally mainpage styles
 
 .header
+	background: url('../img/header_bg.jpg') no-repeat
+	background-size: cover
 	&__in
 		padding: 25px 0
 		.logo
@@ -16,6 +18,7 @@
 				li
 					display: inline-block
 					padding: 0 10px 
+					height: 40px
 					a
 						&:hover
 							color: $yellow
@@ -40,7 +43,10 @@
 				display: inline-block
 				font-weight: bold
 				padding: 10px 0
-				color: #FFF  
+				color: #FFF 
+				+box 
+	&_main
+		background: none
 .topper
 	background: radial-gradient(at top, #469e2c, #337823)
 	color: #FFF 
@@ -122,3 +128,63 @@
 		p
 			font-size: 13px
 			color: #9A9A9A 
+
+
+// about.html
+
+.sidebar
+	margin-top: 130px
+	width: percentage(240/980)
+	float: left
+	ul
+		li
+			padding-bottom: 20px
+			a
+				color: #3675aa
+				font-size: 14px
+				padding-bottom: 5px
+				&:hover
+					text-decoration: underline
+					color: #469e2c
+				&.active
+					color: #333333
+					border-bottom: 2px solid #469e2c
+					text-decoration: none
+	&_right
+		width: percentage(140/980)
+		text-align: center
+		float: right
+	&__wrap
+		width: 138px
+		height: 138px
+		border: 1px solid #dadada
+		a
+			font-size: 16px
+			color: #3675aa
+			span
+				font-size: 12px
+
+.main
+	&__wrap
+		width: percentage(600/980)
+		padding: 30px 0
+		float: left
+		.breadcrumbs
+			a
+				font-size: 12px
+				color: #9a9a9a
+				text-decoration: underline
+				&.active
+					text-decoration: none
+					font-weight: bold
+		.about
+			h4
+				font-weight: lighter
+				font-size: 36px
+				color: #377f25
+				margin-top: 20px
+			&__text
+				padding: 30px 0
+				p
+					font-size: 16px
+					color: #333
