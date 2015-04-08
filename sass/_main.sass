@@ -15,6 +15,13 @@
 				margin-right: 40px
 				li
 					display: inline-block
+					padding: 0 10px 
+					a
+						&:hover
+							color: $yellow
+						&:active
+							color: $yellow
+							border-bottom: 2px solid #59db31
 			&__submenu
 				display: none
 			.lang
@@ -22,13 +29,18 @@
 				a
 					text-transform: uppercase
 					font-weight: normal
+					padding: 10px
+					&.active
+						background: $yellow
+						-webkit-border-radius: 50% 
+						border-radius: 50% 
+						color: #378125 
+						font-weight: bold 
 			a
 				display: inline-block
 				font-weight: bold
-				padding: 10px 
-				color: #FFF 
-				&:hover
-					color: $yellow
+				padding: 10px 0
+				color: #FFF  
 .topper
 	background: radial-gradient(at top, #469e2c, #337823)
 	color: #FFF 
@@ -49,4 +61,64 @@
 			font-weight: bold
 			font-size: 14px
 			color: #FFF 
-			
+.production
+	text-align: center
+	padding: 45px 0 85px
+	h2
+		display: inline-block
+		font-weight: lighter
+		font-size: 36px
+		p
+			display: inline-block
+			vertical-align: super
+			padding-left: 5px
+			font-size: 12px
+			color: #9A9A9A 
+.presscentre
+	&__in
+		border-top: 1px solid #dadada 
+		border-bottom: 2px solid #469e2c 
+		padding: 35px 0
+		font-size: 0
+	&__wrap
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		h3
+			font-weight: lighter
+			font-size: 24px
+		a
+			font-size: 13px
+			color: #3675AA
+			&:visited
+				color: #6D36AA
+			&:hover
+				text-decoration: underline	
+				color: #469E2C  
+		p
+			padding-top: 25px
+			font-size: 12px
+			color: #9A9A9A
+.footer
+	&__in
+		padding: 20px 0
+	&__menu
+		float: left
+		ul
+			margin: 0 -10px
+			li
+				display: inline-block
+				padding: 10px
+				a
+					display: inline-block
+					color: #000
+					&:visited
+						color: #000 
+					&:hover
+						text-decoration: underline
+						color: #469E2C 
+	.copyright
+		float: right
+		p
+			font-size: 13px
+			color: #9A9A9A 
