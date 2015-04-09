@@ -47,36 +47,36 @@ a { text-decoration: none; }
 .header__in .nav .lang { float: right; }
 .header__in .nav .lang a { text-transform: uppercase; font-weight: normal; padding: 10px; }
 .header__in .nav .lang a.active { background: #ffed00; -webkit-border-radius: 50%; border-radius: 50%; color: #378125; font-weight: bold; }
-.header__in .nav a { display: inline-block; font-weight: bold; padding: 10px 0; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.header__in .nav a { display: inline-block; font-weight: bold; padding: 10px 0; color: #FFF; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .header_main { background: none; }
 
-.topper { background: radial-gradient(at top, #469e2c, #337823); color: white; }
+.topper { background: radial-gradient(at top at top, #469e2c, #337823); color: #FFF; }
 .topper__wrap { width: 500px; margin: 0 auto; padding: 90px 0 165px; text-align: center; }
 .topper__wrap h2 { font-weight: lighter; font-size: 36px; }
 .topper__wrap p { padding: 25px 0; font-size: 16px; }
-.topper__more a { padding: 0 15px; font-weight: bold; font-size: 14px; color: white; }
+.topper__more a { padding: 0 15px; font-weight: bold; font-size: 14px; color: #FFF; }
 
 .production { text-align: center; padding: 45px 0 85px; }
 .production h2 { display: inline-block; font-weight: lighter; font-size: 36px; }
-.production h2 p { display: inline-block; vertical-align: super; padding-left: 5px; font-size: 12px; color: #9a9a9a; }
+.production h2 p { display: inline-block; vertical-align: super; padding-left: 5px; font-size: 12px; color: #9A9A9A; }
 
-.presscentre__in { border-top: 1px solid #dadada; border-bottom: 2px solid #469e2c; padding: 35px 0; font-size: 0; }
+.presscentre__in { border-top: 1px solid #dadada; padding: 35px 0; font-size: 0; }
 .presscentre__wrap { width: 25%; display: inline-block; vertical-align: top; }
 .presscentre__wrap h3 { font-weight: lighter; font-size: 24px; }
-.presscentre__wrap a { font-size: 13px; color: #3675aa; }
-.presscentre__wrap a:visited { color: #6d36aa; }
-.presscentre__wrap a:hover { text-decoration: underline; color: #469e2c; }
-.presscentre__wrap p { padding-top: 25px; font-size: 12px; color: #9a9a9a; }
+.presscentre__wrap a { font-size: 13px; color: #3675AA; }
+.presscentre__wrap a:visited { color: #6D36AA; }
+.presscentre__wrap a:hover { text-decoration: underline; color: #469E2C; }
+.presscentre__wrap p { padding-top: 25px; font-size: 12px; color: #9A9A9A; }
 
-.footer__in { padding: 20px 0; }
+.footer__in { padding: 20px 0; border-top: 2px solid #469e2c; }
 .footer__menu { float: left; }
 .footer__menu ul { margin: 0 -10px; }
 .footer__menu ul li { display: inline-block; padding: 10px; }
-.footer__menu ul li a { display: inline-block; color: black; }
-.footer__menu ul li a:visited { color: black; }
-.footer__menu ul li a:hover { text-decoration: underline; color: #469e2c; }
+.footer__menu ul li a { display: inline-block; color: #000; }
+.footer__menu ul li a:visited { color: #000; }
+.footer__menu ul li a:hover { text-decoration: underline; color: #469E2C; }
 .footer .copyright { float: right; }
-.footer .copyright p { font-size: 13px; color: #9a9a9a; }
+.footer .copyright p { font-size: 13px; color: #9A9A9A; }
 
 .sidebar { margin-top: 130px; width: 24.4898%; float: left; }
 .sidebar ul li { padding-bottom: 20px; }
@@ -88,9 +88,13 @@ a { text-decoration: none; }
 .sidebar__wrap a { font-size: 16px; color: #3675aa; }
 .sidebar__wrap a span { font-size: 12px; }
 
-.main__wrap { width: 61.22449%; padding: 30px 0; float: left; }
+.main__wrap { width: 75.5102%; padding: 30px 30px 30px 0; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .main__wrap .breadcrumbs a { font-size: 12px; color: #9a9a9a; text-decoration: underline; }
 .main__wrap .breadcrumbs a.active { text-decoration: none; font-weight: bold; }
-.main__wrap .about h4 { font-weight: lighter; font-size: 36px; color: #377f25; margin-top: 20px; }
-.main__wrap .about__text { padding: 30px 0; }
-.main__wrap .about__text p { font-size: 16px; color: #333333; }
+.main__wrap .about { padding-bottom: 30px; }
+.main__wrap .about p { font-size: 16px; color: #333; }
+.main__wrap.wrap-center { width: 61.22449%; }
+.main__title { font-weight: lighter; font-size: 36px; color: #377f25; margin: 20px 0 30px; }
+
+.directors__pic { float: left; }
+.directors__wrap { float: left; }
