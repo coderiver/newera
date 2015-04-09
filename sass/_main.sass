@@ -22,7 +22,7 @@
 					a
 						&:hover
 							color: $yellow
-						&:active
+						&.active
 							color: $yellow
 							border-bottom: 2px solid #59db31
 			&__submenu
@@ -48,7 +48,7 @@
 	&_main
 		background: none
 .topper
-	background: radial-gradient(at top center, #469e2c, #337823)
+	background: radial-gradient(at top, #469e2c, #337823)
 	color: #FFF 
 	&__wrap
 		width: 500px
@@ -90,41 +90,38 @@
 		padding: 30px
 		display: inline-block
 		vertical-align: top
+		webkit-border-radius: 50% 
+		border-radius: 50%
 		+box
 		p
 			font-size: 16px
 			&:first-child
 				font-weight: semibold
 		&.item1
-			border: 10px solid #df8b2d
-			webkit-border-radius: 50% 
-			border-radius: 50%
-			opacity: 0.3
+			border: 10px solid rgba(229, 121, 0, 0.3)
 			margin-left: 10px
 			p
-				color: #e57900
+				color: rgb(229, 121, 0)
 		&.item2
-			border: 10px solid #009fe3
-			webkit-border-radius: 50% 
-			border-radius: 50%
-			opacity: 0.3
+			border: 10px solid rgba(0, 159, 227, 0.3)
 			p
-				color: #0193d2
+				color: rgb(0, 159, 227)
 		&.item3
-			border: 10px solid #af8655
-			webkit-border-radius: 50% 
-			border-radius: 50%
-			opacity: 0.3
+			border: 10px solid rgba(175, 134, 85, 0.3)
 			p
-				color: #af8655
+				color: rgb(175, 134, 85)
 		&.item4
-			border: 10px solid #2f70aa
-			webkit-border-radius: 50% 
-			border-radius: 50%
-			opacity: 0.3
+			border: 10px solid rgba(47, 112, 170, 0.3)
 			p
-				color: #2f70aa
-.presscentre
+				color: rgb(47, 112, 170)
+	a
+		font-size: 14px
+		font-weight: bold
+		color: #3675aa
+		&:hover
+			text-decoration: underline	
+			color: #469E2C 
+.news
 	&__in
 		border-top: 1px solid #dadada  
 		padding: 35px 0
@@ -178,7 +175,7 @@
 
 .sidebar
 	margin: 130px 0 70px 0
-	width: percentage(240/980)
+	width: percentage(240/940)
 	float: left
 	ul
 		li
@@ -195,7 +192,7 @@
 					border-bottom: 2px solid #469e2c
 					text-decoration: none
 	&_right
-		width: percentage(140/980)
+		width: percentage(140/940)
 		text-align: center
 		float: right
 	&__wrap
@@ -208,10 +205,9 @@
 				font-size: 12px
 .main
 	&__wrap
-		width: percentage(740/980)
-		padding: 30px 30px 30px 0
+		width: percentage(700/940)
+		padding: 30px 0
 		float: left
-		+box
 		.breadcrumbs
 			a
 				font-size: 12px
@@ -226,7 +222,10 @@
 				font-size: 16px
 				color: #333
 		&.wrap-center
-			width: percentage(520/980)
+			width: percentage(480/940)
+		&.wrap-right
+			width: percentage(530/940)
+			padding-right: 30px
 	&__title
 		font-weight: lighter
 		font-size: 36px
@@ -243,7 +242,7 @@
 	&__wrap
 		float: left
 		margin-left: 25px
-		width: percentage(580/740)
+		width: percentage(520/700)
 		font-size: 16px
 		color: #333
 		h4
@@ -318,7 +317,157 @@
 
 // contact_us.html
 .contact
+	font-size: 0
 	&__item
-		float: left
+		width: 210px
+		padding: 0 30px 30px 0
+		display: inline-block
+		vertical-align: top
+		h5
+			font-weight: bold
+			font-size: 16px
+		p
+			font-size: 14px
+			color: #333
+		a
+			font-size: 14px
+			color: #3675aa
+
+
+// history.html
+.history
+	&__item
+		p
+			display: inline-block
+			width: percentage(440/530)
+			padding-top: 13px
+			font-size: 13px
+			color: #333
+		&:last-child .history__year:after
+			display: none
+	&__year
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 60px
+		height: 60px
+		background: $yellow
+		-webkit-border-radius: 50% 
+		border-radius: 50% 
+		text-align: center
+		margin: 0 20px 53px 0
+		+box
+		& > p
+			font-family: 'Open Sans Condensed', sans-serif
+			font-weight: lighter
+			font-size: 24px
+			color: #378125
+		&:after
+			content: ""
+			position: absolute
+			bottom: -60px
+			left: 30px
+			width: 1px
+			height: 100%
+			background: $yellow
+
+// intro_to_ukr.html
+.intro
+	&__text
+		width: percentage(530/700)
+		p
+			font-size: 13px
+			color: #333
+	&__wrap
+		font-size: 0
+		margin: 30px 0 30px 10px
+	&__item
 		width: 220px
-		padding-bottom: 30px
+		height: 220px
+		margin: -10px 0 0 -10px
+		padding: 30px
+		display: inline-block
+		vertical-align: top
+		webkit-border-radius: 50% 
+		border-radius: 50%
+		text-align: center
+		+box
+		p
+			font-size: 14px
+			font-weight: semibold
+			color: #333
+			opacity: 1
+			&:nth-child(2)
+				font-family: 'Open Sans Condensed', sans-serif
+				font-weight: lighter
+				font-size: 24px
+				span
+					font-size: 36px
+		&.item1
+			border: 10px solid rgba(229, 121, 0, 0.3)
+			p:nth-child(2)
+				color: rgb(229, 121, 0)
+		&.item2
+			border: 10px solid rgba(47, 112, 170, 0.3)
+			p:nth-child(2)
+				color: rgb(47, 112, 170)
+		&.item3
+			border: 10px solid rgba(175, 96, 162, 0.3)
+			p:nth-child(2)
+				color: rgb(175, 96, 162)
+		&.item4
+			border: 10px solid rgba(0, 159, 227, 0.3)
+			p:nth-child(2)
+				color: rgb(0, 159, 227)
+		&.item5
+			border: 10px solid rgba(175, 134, 85, 0.3)
+			p:nth-child(2)
+				color: rgb(175, 134, 85)
+		&.item6
+			border: 10px solid rgba(70, 158, 44, 0.3)
+			p:nth-child(2)
+				color: rgb(70, 158, 44)
+
+
+// monthly_reports.html
+.reports
+	&__item
+		margin-bottom: 20px
+		padding-left: 35px
+		a
+			font-size: 16px
+			color: #3675aa
+		p
+			padding-top: 10px
+			font-size: 13px
+			color: #9a9a9a
+
+
+// our_business.html
+
+
+
+// our_clients.html
+
+
+
+// press_centre.html
+.main__title
+	a
+		color: #3675aa
+.presscentre
+	&__item
+		padding-bottom: 35px
+		a
+			font-size: 16px
+			color: #3675aa
+			&:hover
+				text-decoration: underline	
+				color: #469E2C 
+		p
+			font-size: 13px
+			color: #333
+			padding: 20px 0
+		span
+			font-size: 13px
+			color: #9a9a9a
