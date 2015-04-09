@@ -48,7 +48,7 @@
 	&_main
 		background: none
 .topper
-	background: radial-gradient(at top, #469e2c, #337823)
+	background: radial-gradient(at top center, #469e2c, #337823)
 	color: #FFF 
 	&__wrap
 		width: 500px
@@ -80,6 +80,50 @@
 			padding-left: 5px
 			font-size: 12px
 			color: #9A9A9A 
+	&__wrap
+		padding: 25px 0
+		font-size: 0
+	&__item
+		width: 240px
+		height: 240px
+		margin-left: -10px
+		padding: 30px
+		display: inline-block
+		vertical-align: top
+		+box
+		p
+			font-size: 16px
+			&:first-child
+				font-weight: semibold
+		&.item1
+			border: 10px solid #df8b2d
+			webkit-border-radius: 50% 
+			border-radius: 50%
+			opacity: 0.3
+			margin-left: 10px
+			p
+				color: #e57900
+		&.item2
+			border: 10px solid #009fe3
+			webkit-border-radius: 50% 
+			border-radius: 50%
+			opacity: 0.3
+			p
+				color: #0193d2
+		&.item3
+			border: 10px solid #af8655
+			webkit-border-radius: 50% 
+			border-radius: 50%
+			opacity: 0.3
+			p
+				color: #af8655
+		&.item4
+			border: 10px solid #2f70aa
+			webkit-border-radius: 50% 
+			border-radius: 50%
+			opacity: 0.3
+			p
+				color: #2f70aa
 .presscentre
 	&__in
 		border-top: 1px solid #dadada  
@@ -133,7 +177,7 @@
 // about.html
 
 .sidebar
-	margin-top: 130px
+	margin: 130px 0 70px 0
 	width: percentage(240/980)
 	float: left
 	ul
@@ -155,15 +199,13 @@
 		text-align: center
 		float: right
 	&__wrap
-		width: 138px
-		height: 138px
 		border: 1px solid #dadada
+		padding: 20px
 		a
 			font-size: 16px
 			color: #3675aa
 			span
 				font-size: 12px
-
 .main
 	&__wrap
 		width: percentage(740/980)
@@ -184,7 +226,7 @@
 				font-size: 16px
 				color: #333
 		&.wrap-center
-			width: percentage(600/980)
+			width: percentage(520/980)
 	&__title
 		font-weight: lighter
 		font-size: 36px
@@ -194,7 +236,89 @@
 
 // board_of_directors.html
 .directors
+	&__in
+		padding-bottom: 50px
 	&__pic
 		float: left
 	&__wrap
 		float: left
+		margin-left: 25px
+		width: percentage(580/740)
+		font-size: 16px
+		color: #333
+		h4
+			font-weight: bold
+			padding-bottom: 5px
+		span
+			color: #9A9A9A
+		p
+			font-size: 13px
+			padding-top: 15px
+
+
+// career.html
+.career
+	p
+		font-size: 16px
+		color: #333
+		padding-bottom: 25px
+	a
+		display: block
+		padding-bottom: 10px
+		font-size: 16px
+		font-weight: bold
+		color: #3675aa
+		span
+			display: none
+.sidebar	
+	&_career
+		width: 220px
+		h5
+			font-size: 24px
+			font-weight: lighter
+			color: #000
+		form
+			p
+				text-transform: uppercase
+				color: #737373
+				font-size: 11px
+				padding: 15px 0 10px 0
+			input
+				width: 180px
+				height: 34px
+				padding: 0 10px
+				border: 1px solid #dadada
+				+box
+			textarea
+				margin-top: 15px
+				width: 180px
+				height: 84px
+				padding: 10px
+				border: 1px solid #dadada
+				resize: none
+				+box
+			button
+				margin-top: 15px
+				text-align: center
+				color: #FFF
+				width: 180px
+				height: 34px
+				background: #a2ce95
+	&__in
+		h5
+			padding-top: 30px
+			font-weight: lighter
+			font-size: 24px
+			color: #000
+		p
+			padding-top: 20px
+			font-size: 14px
+			color: #333
+
+
+// contact_us.html
+.contact
+	&__item
+		float: left
+		width: 220px
+		padding-bottom: 30px
