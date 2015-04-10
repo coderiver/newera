@@ -20,13 +20,48 @@
 					padding: 0 10px 
 					height: 40px
 					a
+						i
+							color: $yellow
+							vertical-align: top
+							padding-left: 5px
 						&:hover
 							color: $yellow
+							text-decoration: none
 						&.active
 							color: $yellow
 							border-bottom: 2px solid #59db31
+			&__item
+				position: relative
+				&.active
+					.nav__submenu
+						display: block
 			&__submenu
 				display: none
+				position: absolute
+				top: 30px
+				left: 0
+				background: #FFF
+				border-top: 1px solid #59db31
+				border-bottom: 1px solid #59db31
+				width: 220px
+				padding: 15px
+				z-index: 2
+				box-shadow: 0px 0px 10px -1px #333
+				+box
+				li
+					display: block
+					padding: 0 0 15px 0
+					height: auto
+					&:last-child
+						padding-bottom: 0
+					a
+						font-size: 14px
+						color: #333
+						padding: 0
+						font-weight: normal
+						&:hover
+							color: #469e2c
+							text-decoration: underline
 			.lang
 				float: right
 				a
@@ -63,10 +98,15 @@
 			font-size: 16px
 	&__more
 		a
-			padding: 0 15px
 			font-weight: bold
 			font-size: 14px
 			color: #FFF 
+			i
+				color: $yellow
+				vertical-align: middle
+				padding-right: 10px
+			&:first-child
+				margin-right: 35px
 .production
 	text-align: center
 	padding: 45px 0 85px
@@ -118,33 +158,50 @@
 		font-size: 14px
 		font-weight: bold
 		color: #3675aa
+		i
+			color: #469e2c
+			vertical-align: middle
+			padding-right: 10px
 		&:hover
-			text-decoration: underline	
 			color: #469E2C 
 .news
 	&__in
 		border-top: 1px solid #dadada  
 		padding: 35px 0
 		font-size: 0
-	&__wrap
+	&__title
 		width: 25%
 		display: inline-block
 		vertical-align: top
 		h3
 			font-weight: lighter
 			font-size: 24px
+	&__wrap
+		position: relative
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		padding: 0 20px
+		+box
 		a
 			font-size: 13px
 			color: #3675AA
 			&:visited
 				color: #6D36AA
 			&:hover
-				text-decoration: underline	
 				color: #469E2C  
 		p
 			padding-top: 25px
 			font-size: 12px
 			color: #9A9A9A
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 0
+			height: 1px
+			width: 13px
+			background: #4eaf30
 .footer
 	&__in
 		padding: 20px 0
@@ -162,8 +219,9 @@
 					&:visited
 						color: #000 
 					&:hover
-						text-decoration: underline
 						color: #469E2C 
+					&.active
+						color: #469E2C
 	.copyright
 		float: right
 		p
@@ -185,7 +243,6 @@
 				font-size: 14px
 				padding-bottom: 5px
 				&:hover
-					text-decoration: underline
 					color: #469e2c
 				&.active
 					color: #333333
@@ -201,8 +258,14 @@
 		a
 			font-size: 16px
 			color: #3675aa
+			i
+				color: #469e2c
+				padding-bottom: 13px
 			span
 				font-size: 12px
+				color: #9a9a9a
+			&:hover
+				color: #469e2c
 .main
 	&__wrap
 		width: percentage(700/940)
@@ -216,11 +279,8 @@
 				&.active
 					text-decoration: none
 					font-weight: bold
-		.about
-			padding-bottom: 30px
-			p
-				font-size: 16px
-				color: #333
+					&:hover
+						text-decoration: underline
 		&.wrap-center
 			width: percentage(480/940)
 		&.wrap-right
@@ -231,6 +291,24 @@
 		font-size: 36px
 		color: #377f25
 		margin: 20px 0 30px
+.about
+	padding-bottom: 30px
+	p
+		font-size: 16px
+		color: #333
+		padding-bottom: 20px
+	> ul
+		li
+			position: relative
+			padding-left: 40px
+			&:before
+				content: ""
+				position: absolute
+				top: 10px
+				left: 15px
+				height: 1px
+				width: 13px
+				background: #4eaf30
 
 
 // board_of_directors.html
@@ -267,8 +345,21 @@
 		font-size: 16px
 		font-weight: bold
 		color: #3675aa
-		span
+		i
+			color: $yellow
+			vertical-align: middle
+			padding-right: 10px
+		.career__more
 			display: none
+			padding-left: 35px
+			font-size: 14px
+			color: #333
+			font-weight: normal
+		&.active
+			.career__more
+				display: block
+		&:hover
+			color: #469e2c
 .sidebar	
 	&_career
 		width: 220px
@@ -282,7 +373,7 @@
 				color: #737373
 				font-size: 11px
 				padding: 15px 0 10px 0
-			input
+			input, select
 				width: 180px
 				height: 34px
 				padding: 0 10px
@@ -332,6 +423,12 @@
 		a
 			font-size: 14px
 			color: #3675aa
+			&:hover
+				color: #469e2c
+#contact-map
+	width: 230px
+	height: 290px
+	margin-left: -30px
 
 
 // history.html
@@ -375,12 +472,14 @@
 .intro
 	&__text
 		width: percentage(530/700)
+		margin: 30px 0
 		p
 			font-size: 13px
 			color: #333
 	&__wrap
 		font-size: 0
-		margin: 30px 0 30px 10px
+		margin: 10px 0 30px 10px
+		padding-top: 10px
 	&__item
 		width: 220px
 		height: 220px
@@ -429,14 +528,29 @@
 				color: rgb(70, 158, 44)
 
 
+// locations.html
+#location-map
+	width: 100%
+	height: 500px
+
+
 // monthly_reports.html
 .reports
+	padding-bottom: 300px
 	&__item
+		position: relative
 		margin-bottom: 20px
 		padding-left: 35px
+		i
+			position: absolute
+			top: 5px
+			left: 0
+			color: #469e2c
 		a
 			font-size: 16px
 			color: #3675aa
+			&:hover
+				color: #469e2c
 		p
 			padding-top: 10px
 			font-size: 13px
@@ -444,25 +558,83 @@
 
 
 // our_business.html
+.business
+	&__wrap
+		p
+			width: percentage(550/700)
+			padding-bottom: 15px
+			font-size: 16px
+			color: #333
+		table
+			margin: 40px 0
+			font-size: 14px
+			color: #333
+			text-align: left
+			tr
+				border-bottom: 1px solid #dadada
+				&:first-child
+					border-bottom: 2px solid #469e2c
+				&:last-child
+					border-bottom: 2px solid #469e2c
+					td
+						color: #469e2c
+						font-weight: bold
+			th
+				padding: 15px 0
+				font-weight: bold
+				text-transform: uppercase
+			th, td
+				padding: 10px 0
+				&:nth-child(2)
+					padding-right: 50px
+				&:nth-child(2n)
+					text-align: right
+	&__imgs
+		font-size: 0
+		margin-left: -20px
+		img
+			margin-left: 20px
 
 
 
 // our_clients.html
-
+.clients
+	margin-left: -20px
+	padding-bottom: 270px
+	font-size: 0
+	&__item
+		width: percentage(213/700)
+		padding: 25px
+		margin-left: 20px
+		border: 3px solid #e6e6e6
+		text-align: center
+		display: inline-block
+		vertical-align: top
+		+box
+		p
+			font-size: 14px
+			color: #333
+			padding-top: 20px
 
 
 // press_centre.html
 .main__title
 	a
 		color: #3675aa
+		i
+			color: #9A9A9A
+			vertical-align: top
+			padding: 15px 0 0 15px
+			font-size: 16px
+		&:hover
+			color: #469e2c
 .presscentre
 	&__item
 		padding-bottom: 35px
 		a
 			font-size: 16px
 			color: #3675aa
-			&:hover
-				text-decoration: underline	
+			&:hover	
 				color: #469E2C 
 		p
 			font-size: 13px
