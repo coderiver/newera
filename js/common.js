@@ -1,17 +1,59 @@
 head.ready(function() {
 
-	$(".js-career").click(function() {
-		$(this).toggleClass("active");
-		$(".fa").toggleClass("fa-plus-circle");
-		$(".fa").toggleClass("fa-minus-circle");
+	// tablet menu
+	$(".js-tablet-btn").click(function() {
+		$(".js-tablet-menu").addClass("active");
 		return false
 	});
 
+	$(".js-tablet-close").click(function() {
+		$(".js-tablet-menu").removeClass("active");
+		return false
+	});
+
+	// tablet menu dropdown
+	$('.js-tablet-dropdown').on('click', function(){
+	  	if ($(this).hasClass('is-open')) {
+	   		$(this).removeClass('is-open');
+	   		$(this).next().slideUp('fast');
+	  	} else {
+			$('.mobile-menu__link').removeClass('is-open');
+			$('.dropdown__list').slideUp('fast');
+			$(this).addClass('is-open');
+			$(this).next().slideDown('fast');
+	  	} 
+	});
+
+	// menu
 	$(".nav__item").click(function() {
 		$(this).toggleClass("active");
 		return false
 	});
 
+	// career item
+	$(".js-career").click(function() {
+		$(this).toggleClass("active");
+		$(this).find(".fa").toggleClass("fa-plus-circle");
+		$(this).find(".fa").toggleClass("fa-minus-circle");
+		return false
+	});
+
+	// validation
+	var form_validate = $('.js-validate');
+	if (form_validate.length) {
+	  	form_validate.each(function () {
+	   		var form_this = $(this);
+	   		$.validate({
+	    		form : form_this,
+	    		onValidate : function() {
+	    			alert();
+	        		$('.js-button').removeAttr("disabled");
+	    		}
+	   		});
+	  	});
+	 };
+
+	// contact map
 	function initialize() {
 	  var myLatlng = new google.maps.LatLng(50.447378, 30.523349);
 	  var mapOptions = {
@@ -31,7 +73,7 @@ head.ready(function() {
 		google.maps.event.addDomListener(window, 'load', initialize);
 	}
 	
-
+	// location map
 	function initialize2(){
     
 	var myLatlng = new google.maps.LatLng(49.013904, 31.285831);

@@ -5,16 +5,20 @@
 	background-size: cover
 	&__in
 		padding: 25px 0
+		+rm(768)
+			padding: 15px 0
 		.logo
 			float: left
+			width: percentage(240/940) 
 			a
 				display: block
 		.nav
 			float: right
 			padding: 27px 0
+			width: percentage(700/940) 
 			&__menu
 				float: left
-				margin-right: 40px
+				margin: 0 40px 0 -10px
 				li
 					display: inline-block
 					padding: 0 10px 
@@ -23,7 +27,7 @@
 						i
 							color: $yellow
 							vertical-align: top
-							padding-left: 5px
+							margin-left: 5px
 						&:hover
 							color: $yellow
 							text-decoration: none
@@ -35,6 +39,10 @@
 				&.active
 					.nav__submenu
 						display: block
+					.fa
+						vertical-align: bottom
+						+tr(transform 200ms)
+						+rotate(180)
 			&__submenu
 				display: none
 				position: absolute
@@ -61,27 +69,111 @@
 						font-weight: normal
 						&:hover
 							color: #469e2c
-							text-decoration: underline
-			.lang
-				float: right
-				a
-					text-transform: uppercase
-					font-weight: normal
-					padding: 10px
-					&.active
-						background: $yellow
-						-webkit-border-radius: 50% 
-						border-radius: 50% 
-						color: #378125 
-						font-weight: bold 
+							text-decoration: underline 
 			a
 				display: inline-block
 				font-weight: bold
 				padding: 10px 0
 				color: #FFF 
 				+box 
+			+r(768)
+				display: none
 	&_main
 		background: none
+.lang
+	float: right
+	a.lang__item
+		text-transform: uppercase
+		font-weight: normal
+		padding: 10px
+		&.active
+			background: $yellow
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			color: #378125 
+			font-weight: bold
+	&_tablet
+		float: none
+		a
+			font-size: 14px 
+
+.menu-btn
+	display: none
+	padding: 42px 0
+	float: right
+	span
+		display: block
+		position: relative
+		width: 23px
+		height: 5px
+		background: #FFF
+		&:before, &:after
+			content: ""
+			position: absolute
+			left: 0
+			width: 23px
+			height: 5px
+			background: #FFF
+		&:before
+			top: -9px
+		&:after
+			top: 9px
+	+r(768)
+		display: block
+
+.tablet-menu
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	text-align: center
+	padding-top: 220px
+	background: url("../img/bg_tablet.png") left bottom no-repeat, linear-gradient(#469e2c, #347b24)
+	overflow-y: auto
+	z-index: 99
+	&.active
+		display: block	
+	&__close
+		position: absolute
+		top: 60px
+		right: 30px
+		i
+			color: #FFF 
+	&__list
+		padding: 50px 0
+		& > li
+			padding: 15px 0
+	a
+		font-weight: lighter
+		font-size: 30px
+		color: #FFF 
+			
+.dropdown
+	.tablet-menu__link
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+			+arr(8, 8, #FFF, b)
+			+tr(transform 200ms)
+		&.is-open
+			&:after
+				+rotate(180)
+			.dropdown__list
+				display: block
+	&__list
+		display: none
+		li
+			padding: 5px 0
+			a
+				font-size: 24px
+
+.mobile-menu
+	display: none
+
 .topper
 	background: radial-gradient(at top, #469e2c, #337823)
 	color: #FFF 
@@ -135,8 +227,8 @@
 		+box
 		p
 			font-size: 16px
-			&:first-child
-				font-weight: semibold
+			&:nth-child(2)
+				font-weight: 600
 		&.item1
 			border: 10px solid rgba(229, 121, 0, 0.3)
 			margin-left: 10px
@@ -230,9 +322,36 @@
 
 
 // about.html
-
+.main
+	&__top
+		margin-top: 30px
+		padding-left: percentage(240/940) 
+		.breadcrumbs
+			a
+				font-size: 12px
+				color: #9a9a9a
+				text-decoration: underline
+				&.active
+					text-decoration: none
+					font-weight: bold
+					&:hover
+						text-decoration: underline
+	&__title
+		font-weight: lighter
+		font-size: 36px
+		color: #377f25
+		margin-top: 20px
+	&__in
+		padding: 30px 0
+	&__wrap
+		width: percentage(700/940)
+		float: left
+		&.wrap-center
+			width: percentage(480/940)
+		&.wrap-right
+			width: percentage(530/940)
+			padding-right: 30px
 .sidebar
-	margin: 130px 0 70px 0
 	width: percentage(240/940)
 	float: left
 	ul
@@ -266,31 +385,6 @@
 				color: #9a9a9a
 			&:hover
 				color: #469e2c
-.main
-	&__wrap
-		width: percentage(700/940)
-		padding: 30px 0
-		float: left
-		.breadcrumbs
-			a
-				font-size: 12px
-				color: #9a9a9a
-				text-decoration: underline
-				&.active
-					text-decoration: none
-					font-weight: bold
-					&:hover
-						text-decoration: underline
-		&.wrap-center
-			width: percentage(480/940)
-		&.wrap-right
-			width: percentage(530/940)
-			padding-right: 30px
-	&__title
-		font-weight: lighter
-		font-size: 36px
-		color: #377f25
-		margin: 20px 0 30px
 .about
 	padding-bottom: 30px
 	p
@@ -339,27 +433,32 @@
 		font-size: 16px
 		color: #333
 		padding-bottom: 25px
-	a
-		display: block
-		padding-bottom: 10px
-		font-size: 16px
-		font-weight: bold
-		color: #3675aa
-		i
-			color: $yellow
-			vertical-align: middle
-			padding-right: 10px
-		.career__more
-			display: none
-			padding-left: 35px
-			font-size: 14px
-			color: #333
-			font-weight: normal
-		&.active
-			.career__more
-				display: block
-		&:hover
-			color: #469e2c
+	ul
+		li
+			display: block
+			a
+				display: inline-block
+				padding-bottom: 10px
+				font-size: 16px
+				font-weight: bold
+				color: #3675aa
+				i
+					color: $yellow
+					vertical-align: middle
+					padding-right: 10px
+				.career__more
+					display: none
+					padding-left: 35px
+					font-size: 14px
+					color: #333
+					font-weight: normal
+				&.active
+					.career__more
+						display: block
+					&:hover
+						text-decoration: none
+				&:hover
+					color: #469e2c
 .sidebar	
 	&_career
 		width: 220px
@@ -378,7 +477,7 @@
 				height: 34px
 				padding: 0 10px
 				border: 1px solid #dadada
-				+box
+				+box 
 			textarea
 				margin-top: 15px
 				width: 180px
@@ -393,7 +492,16 @@
 				color: #FFF
 				width: 180px
 				height: 34px
-				background: #a2ce95
+				background: #469e2c
+				+box
+				&:disabled
+					background: #a2ce95
+					cursor: default
+				&:hover	
+					background: #4EC529 
+				&:active
+					background: #4EC529
+					border-top: 3px solid #238d10 
 	&__in
 		h5
 			padding-top: 30px

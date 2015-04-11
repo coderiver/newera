@@ -23,6 +23,7 @@
 				<div class="logo">
 					<a href="#"><img src="img/logo_en.png" alt=""></a>
 				</div>
+				<a class="menu-btn js-tablet-btn js-mobile-btn" href="#"><span></span></a>
 				<nav class="nav clr">
 					<ul class="nav__menu">
 						<li class="nav__item">
@@ -68,8 +69,8 @@
 						</li>
 					</ul>
 					<div class="lang">
-						<a class="active" href="#">En</a>
-						<a href="#">РУ</a>
+						<a class="lang__item active" href="#">En</a>
+						<a class="lang__item"href="#">РУ</a>
 					</div>
 				</nav>
 			</div>
@@ -79,50 +80,54 @@
 	<!-- BEGIN main -->
 	<div class="main">
 		<div class="center clr">
-			<aside class="sidebar">
-				<ul>
-					<li><a href="#">Introduction to Ukraine</a></li>
-					<li><a class="active" href="#">What We Do </a></li>
-					<li><a href="#">Strategy</a></li>
-					<li><a href="#">History</a></li>
-					<li><a href="#">Board of Directors</a></li>
-					<li><a href="#">Management</a></li>
-					<li><a href="#">Our Clients</a></li>
-					<li><a href="#">Corporate Responsibility</a></li>
-					<li><a href="#">Career</a></li>
-				</ul>
-			</aside>
-			<div class="main__wrap wrap-right">
+			<div class="main__top">
 				<div class="breadcrumbs">
 					<a href="#">Home</a> /
 					<a class="active" href="#">About Us:</a>
 				</div>
 				<h4 class="main__title">The New Era Energy Group</h4>
-				<div class="about">
-					<p>The New Era Energy Group (New Era) is a leading renewable heat energy and biomass producer in Ukraine. Currently operating 2.1 MW biomass heat stations and 26,000 tons annual pellet production, New Era invests, constructs and manages renewable heat stations and pellet production facilities and sells eco-friendly heat to municipal schools, hospitals, kindergartens and industrial enterprises.</p>
-					<p>New Era gives priority to medium and large-sized projects that improve Ukraine’s energy efficiency and independence.</p>
-					<p>New Era provides a full-range of services:</p>
-					<ul>
-						<li><p>Production and transportation of heat energy Production and transportation of heat energy</p></li>
-						<li><p>Wood pellet production</p></li>
-						<li><p>Cultivation of energy willow</p></li>
-						<li><p>Manufacture of heat facilities</p></li>
-						<li><p>Installation of boiler equipment</p></li>
-						<li><p>Maintenance of heat facilities</p></li>
-						<li><p>GSM automatization of heat facilities</p></li>
-					</ul>
-					<p>Being the both operator and manufacturer of heat facilities, New Era provides superior and lower cost services to its clients.</p>
-				</div>
 			</div>
-			<aside class="sidebar sidebar_right">
-				<div class="sidebar__wrap">
-					<a href="#">
-						<i class="fa fa-file"></i>
-						<p>Company presentation</p>
-						<span>pdf, 2,5 Mb</span>
-					</a>
+			<div class="main__in">
+				<aside class="sidebar">
+					<ul>
+						<li><a href="#">Introduction to Ukraine</a></li>
+						<li><a class="active" href="#">What We Do </a></li>
+						<li><a href="#">Strategy</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">Board of Directors</a></li>
+						<li><a href="#">Management</a></li>
+						<li><a href="#">Our Clients</a></li>
+						<li><a href="#">Corporate Responsibility</a></li>
+						<li><a href="#">Career</a></li>
+					</ul>
+				</aside>
+				<div class="main__wrap wrap-right">
+					<div class="about">
+						<p>The New Era Energy Group (New Era) is a leading renewable heat energy and biomass producer in Ukraine. Currently operating 2.1 MW biomass heat stations and 26,000 tons annual pellet production, New Era invests, constructs and manages renewable heat stations and pellet production facilities and sells eco-friendly heat to municipal schools, hospitals, kindergartens and industrial enterprises.</p>
+						<p>New Era gives priority to medium and large-sized projects that improve Ukraine’s energy efficiency and independence.</p>
+						<p>New Era provides a full-range of services:</p>
+						<ul>
+							<li><p>Production and transportation of heat energy Production and transportation of heat energy</p></li>
+							<li><p>Wood pellet production</p></li>
+							<li><p>Cultivation of energy willow</p></li>
+							<li><p>Manufacture of heat facilities</p></li>
+							<li><p>Installation of boiler equipment</p></li>
+							<li><p>Maintenance of heat facilities</p></li>
+							<li><p>GSM automatization of heat facilities</p></li>
+						</ul>
+						<p>Being the both operator and manufacturer of heat facilities, New Era provides superior and lower cost services to its clients.</p>
+					</div>
 				</div>
-			</aside>
+				<aside class="sidebar sidebar_right">
+					<div class="sidebar__wrap">
+						<a href="#">
+							<i class="fa fa-file"></i>
+							<p>Company presentation</p>
+							<span>pdf, 2,5 Mb</span>
+						</a>
+					</div>
+				</aside>
+			</div>
 		</div>
 	</div>
 	<!-- END main -->
@@ -174,6 +179,86 @@
 	<!-- END footer -->
 </div>
 <!-- END out-->
+<!-- BEGIN tablet-menu-->
+<div class="tablet-menu js-tablet-menu">
+	<div class="tablet-menu__in">
+		<div class="lang lang_tablet">
+			<a class="active" href="#">En</a>
+			<a href="#">РУ</a>
+		</div>
+		<div class="tablet-menu__close js-tablet-close"><i class="fa fa-times fa-5x"></i></div>
+		<ul class="tablet-menu__list">
+			<li class="dropdown">
+				<a href="#" class="tablet-menu__link js-tablet-dropdown">About US</a>
+				<ul class="dropdown__list">
+					<li><a href="#">Introduction to Ukraine</a></li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">Strategy</a></li>
+					<li><a href="#">History</a></li>
+					<li><a href="#">Board of Directors</a></li>
+					<li><a href="#">Management</a></li>
+					<li><a href="#">Our Clients</a></li>
+					<li><a href="#">Corporate Responsibility</a></li>
+					<li><a href="#">Career</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="tablet-menu__link js-tablet-dropdown">Our Business</a>
+				<ul class="dropdown__list">
+					<li><a href="#">Heat Energy Production</a></li>
+					<li><a href="#">Pellet Production</a></li>
+					<li><a href="#">Energy Willow Cultivation</a></li>
+					<li><a href="#">Heat Facilities Manufacturing</a></li>
+					<li><a href="#">Heat Facilities Maintenance</a></li>
+					<li><a href="#">Heat Sales</a></li>
+					<li><a href="#">Pellet Sales</a></li>
+					<li><a href="#">Supply Chain Management</a></li>
+					<li><a href="#">Locations</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Investor Relations</a>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Corporate Responsibility</a>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="tablet-menu__link js-tablet-dropdown">Press Centre</a>
+				<ul class="dropdown__list">
+					<li><a href="#">Press Peleases</a></li>
+					<li><a href="#">Monthly Reports</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Career</a>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Contact us</a>
+		</li>
+		</ul>
+	</div>
+</div>
+<!-- END tablet-menu-->
+<!-- BEGIN mobile-menu-->
+<div class="mobile-menu">
+	<div class="mobile-menu__in">
+		<div class="lang lang_mobile">
+			<a class="active" href="#">En</a>
+			<a href="#">РУ</a>
+		</div>
+		<div class="mobile-menu__close"></div>
+		<ul class="mobile-menu__list">
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+		</ul>
+	</div>
+</div>
+<!-- END mobile-menu-->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

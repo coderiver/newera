@@ -69,8 +69,8 @@
 						</li>
 					</ul>
 					<div class="lang">
-						<a class="active" href="#">En</a>
-						<a href="#">РУ</a>
+						<a class="lang__item active" href="#">En</a>
+						<a class="lang__item"href="#">РУ</a>
 					</div>
 				</nav>
 			</div>
@@ -120,9 +120,10 @@
 			</div>
 			<aside class="sidebar sidebar_career">
 				<div class="sidebar__wrap">
-					<form action="">
+					<h5>Career contacts</h5>
+					<form action="/registration" method="POST">
 						<p>Your Name</p>
-						<input type="text">
+						<input type="text" name="user" data-validation="length" data-validation-length="min4">
 						<p>Phone</p>
 						<input type="text">
 						<p>E-mail</p>

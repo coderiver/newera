@@ -68,8 +68,8 @@
 						</li>
 					</ul>
 					<div class="lang">
-						<a class="active" href="#">En</a>
-						<a href="#">РУ</a>
+						<a class="lang__item active" href="#">En</a>
+						<a class="lang__item"href="#">РУ</a>
 					</div>
 				</nav>
 			</div>
@@ -78,59 +78,81 @@
 	<!-- END header -->
 	<!-- BEGIN main -->
 	<div class="main">
-		<div class="center clr">
-			<aside class="sidebar">
-				<ul>
-					<li><a href="#">Introduction to Ukraine</a></li>
-					<li><a href="#">What We Do </a></li>
-					<li><a href="#">Strategy</a></li>
-					<li><a href="#">History</a></li>
-					<li><a href="#">Board of Directors</a></li>
-					<li><a href="#">Management</a></li>
-					<li><a href="#">Our Clients</a></li>
-					<li><a href="#">Corporate Responsibility</a></li>
-					<li><a class="active" href="#">Career</a></li>
-				</ul>
-			</aside>
-			<div class="main__wrap wrap-center">
+		<div class="center">
+			<div class="main__top">
 				<div class="breadcrumbs">
 					<a href="#">Home</a> /
 					<a class="active" href="#">About Us:</a>
 				</div>
 				<h4 class="main__title">Career</h4>
-				<div class="career">
-					<p>At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</p>
-					<a class="js-career" href="#"><i class="fa fa-plus-circle fa-2x"></i>Young Specialist<span class="career__more">At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility. At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</span></a>
-					<a class="js-career" href="#"><i class="fa fa-plus-circle fa-2x"></i>Web Developer<span class="career__more">At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility. At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</span></a>
-					<a class="js-career" href="#"><i class="fa fa-plus-circle fa-2x"></i>Office Manager<span class="career__more">At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility. At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</span></a>
-				</div>
 			</div>
-			<aside class="sidebar sidebar_career">
-				<div class="sidebar__wrap">
-					<h5>Career contacts</h5>
-					<form action="">
-						<p>Your Name</p>
-						<input type="text">
-						<p>Phone</p>
-						<input type="text">
-						<p>E-mail</p>
-						<input type="text">
-						<p>Career</p>
-						<select name="" id="">
-							<option value="1">Young Specialist</option>
-							<option value="2">Web Developer</option>
-							<option value="3">Office Manager</option>
-						</select>
-						<textarea name=""></textarea>
-						<button>Submit</button>
-					</form>
+			<div class="main__in clr">
+				<aside class="sidebar">
+					<ul>
+						<li><a href="#">Introduction to Ukraine</a></li>
+						<li><a href="#">What We Do </a></li>
+						<li><a href="#">Strategy</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">Board of Directors</a></li>
+						<li><a href="#">Management</a></li>
+						<li><a href="#">Our Clients</a></li>
+						<li><a href="#">Corporate Responsibility</a></li>
+						<li><a class="active" href="#">Career</a></li>
+					</ul>
+				</aside>
+				<div class="main__wrap wrap-center">
+					<div class="career">
+						<p>At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</p>
+						<ul>
+							<li>
+								<a class="js-career" href="#"><i class="fa fa-plus-circle fa-2x"></i>Young Specialist<span class="career__more">At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility. At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</span></a>
+							</li>
+							<li>
+								<a class="js-career" href="#"><i class="fa fa-plus-circle fa-2x"></i>Web Developer<span class="career__more">At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility. At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</span></a>
+							</li>
+							<li>
+								<a class="js-career" href="#"><i class="fa fa-plus-circle fa-2x"></i>Office Manager<span class="career__more">At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility. At New Era, you will find a challenging and professionally stimulating work environment that values professionalism, commitment and responsibility.</span></a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="sidebar__in">
-					<h5>HR Department</h5>
-					<p>PJSC Myronivsky Hliboproduct 158, Ak.Zabolotnogo Str Kyiv, Ukraine, 03143</p>
-					<p>tel. +38 044 207 00 49</p>
-				</div>
-			</aside>
+				<aside class="sidebar sidebar_career">
+					<div class="sidebar__wrap">
+						<h5>Career contacts</h5>
+						<form class="js-validate">
+							<label>
+								<p>Your Name</p>
+								<input type="text" name="name" data-validation="required">
+							</label>
+							<label>
+								<p>Phone</p>
+								<input type="text" name="phone" data-validation="number" data-validation="required">
+							</label>
+							<label>
+								<p>E-mail</p>
+								<input type="text" name="email" data-validation="email" data-validation="required">
+							</label>
+							<label>
+								<p>Career</p>
+								<select name="career" id="" data-validation="required">
+									<option value="1">Young Specialist</option>
+									<option value="2">Web Developer</option>
+									<option value="3">Office Manager</option>
+								</select>
+							</label>
+							<label>
+								<textarea name="textarea"></textarea>
+							</label>
+							<button type="submit" class="js-button">Submit</button>
+						</form>
+					</div>
+					<div class="sidebar__in">
+						<h5>HR Department</h5>
+						<p>PJSC Myronivsky Hliboproduct 158, Ak.Zabolotnogo Str Kyiv, Ukraine, 03143</p>
+						<p>tel. +38 044 207 00 49</p>
+					</div>
+				</aside>
+			</div>
 		</div>
 	</div>
 	<!-- END main -->

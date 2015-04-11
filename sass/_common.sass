@@ -48,6 +48,14 @@
 // 	+jpg(bla)
 
 
+=rm($width)
+	@media only screen and (min-width: $width+ "px")
+		@content
+
+.out
+	position: relative
+	z-index: 1
+
 body
 	font-family: "Open Sans", sans-serif 
 	font-size: 12px 
@@ -56,6 +64,12 @@ body
 .center
 	width: 940px
 	margin: 0 auto
+	+r(939)
+		width: auto
+		margin: 0 30px
+	+r(767)
+		width: auto
+		margin: 0 20px
 
 .clr
 	+clr
@@ -72,6 +86,4 @@ sup
 
 // colors
 $yellow: #ffed00
-
-
 
