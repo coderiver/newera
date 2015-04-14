@@ -5,7 +5,7 @@
 	background-size: cover
 	&__in
 		padding: 25px 0
-		+rm(767, 939)
+		+r(939)
 			padding: 15px 0
 		.logo
 			float: left
@@ -134,13 +134,13 @@
 	overflow-y: auto
 	z-index: 99
 	&.active
-		display: block	
+		display: block
 	&__close
 		position: absolute
 		top: 60px
 		right: 30px
 		i
-			color: #FFF 
+			color: #FFF 	
 	&__list
 		padding: 50px 0
 		& > li
@@ -149,7 +149,7 @@
 		font-weight: lighter
 		font-size: 30px
 		color: #FFF 
-			
+
 .dropdown
 	.tablet-menu__link
 		&:after
@@ -173,6 +173,70 @@
 
 .mobile-menu
 	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	text-align: left
+	padding-top: 40px
+	background: url("../img/bg_mobile.png") left bottom no-repeat, linear-gradient(#469e2c, #347b24)
+	overflow-y: auto
+	z-index: 99
+	&.active
+		display: block
+	&__in
+		padding: 20px
+	&__close
+		position: absolute
+		top: 50px
+		right: 20px
+		i
+			color: #FFF 
+	&__wrap
+		margin: 40px 0
+		overflow: hidden
+		position: relative
+		&.is-open
+			+transform(translateX(-110%))
+			.mobile-menu__submenu
+				left: 20px
+	&__list
+		padding: 10px 0
+		width: 100%
+	&__link
+		width: 100%
+		position: relative
+		display: block
+		font-weight: lighter
+		font-size: 22px
+		color: #FFF  
+		i
+			position: absolute
+			right: 0
+			bottom: 5px
+			color: #FFF 
+		&.active
+			span
+				color: $yellow
+				border-bottom: 2px solid #59db31
+	&__submenu
+		position: absolute
+		top: 10px
+		left: 100%
+		a
+			font-weight: lighter
+			font-size: 22px
+			color: #FFF 
+		ul
+			li
+				> a
+					font-weight: lighter
+					font-size: 16px
+					color: #FFF 
+					&.active
+						color: $yellow
+						border-bottom: 2px solid #59db31
 
 .topper
 	background: radial-gradient(at top, #469e2c, #337823)
@@ -235,8 +299,6 @@
 		webkit-border-radius: 50% 
 		border-radius: 50%
 		+box
-		+r(767)
-			margin-left: 0
 		p
 			font-size: 16px
 			padding-top: 10px
@@ -247,7 +309,7 @@
 		&.item1
 			border: 10px solid rgba(229, 121, 0, 0.3)
 			margin-left: 10px
-			+r(767)
+			+r(939)
 				margin-left: 0
 			p, .counter__item p
 				color: rgb(229, 121, 0)
@@ -585,6 +647,8 @@
 				+r(939)
 					display: inline-block
 					margin-left: 20px
+				+r(767)
+					display: block
 			p
 				text-transform: uppercase
 				color: #737373
@@ -599,7 +663,7 @@
 				+r(939)
 					width: 230px
 				+r(767)
-					width: 240px
+					width: 95%
 			textarea
 				margin-top: 15px
 				width: 180px
@@ -611,7 +675,7 @@
 				+r(939)
 					width: 480px
 				+r(767)
-					width: 240px
+					width: 95%
 			button
 				margin-top: 15px
 				text-align: center
@@ -625,7 +689,7 @@
 					margin-right: 15px
 					float: right
 				+r(767)
-					width: 240px
+					width: 91%
 					float: none
 					margin-right: 0
 					margin-left: 20px
@@ -685,6 +749,7 @@
 	margin-bottom: 40px
 	+r(767)
 		display: block
+		width: 100% 
 
 
 // history.html

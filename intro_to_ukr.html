@@ -23,7 +23,7 @@
 				<div class="logo">
 					<a href="#"><img src="img/logo_en.png" alt=""></a>
 				</div>
-				<a class="menu-btn js-tablet-btn js-mobile-btn" href="#"><span></span></a>
+				<a class="menu-btn js-btn" href="#"><span></span></a>
 				<nav class="nav clr">
 					<ul class="nav__menu">
 						<li class="nav__item">
@@ -233,22 +233,67 @@
 </div>
 <!-- END tablet-menu-->
 <!-- BEGIN mobile-menu-->
-<div class="mobile-menu">
+<div class="mobile-menu js-mobile-menu">
 	<div class="mobile-menu__in">
-		<div class="lang lang_mobile">
-			<a class="active" href="#">En</a>
-			<a href="#">РУ</a>
+		<div class="mobile-menu__top">
+			<div class="lang lang_tablet">
+				<a class="lang__item active" href="#">En</a>
+				<a class="lang__item" href="#">РУ</a>
+			</div>
+			<div class="mobile-menu__close js-close"><i class="fa fa-times fa-3x"></i></div>
 		</div>
-		<div class="mobile-menu__close"></div>
-		<ul class="mobile-menu__list">
-			<li><a href="#" class="mobile-menu__link"></a></li>
-			<li><a href="#" class="mobile-menu__link"></a></li>
-			<li><a href="#" class="mobile-menu__link"></a></li>
-			<li><a href="#" class="mobile-menu__link"></a></li>
-			<li><a href="#" class="mobile-menu__link"></a></li>
-			<li><a href="#" class="mobile-menu__link"></a></li>
-			<li><a href="#" class="mobile-menu__link"></a></li>
-		</ul>
+		<div class="mobile-menu__wrap">
+			<ul>
+				<li class="mobile-menu__list">
+					<a href="#" class="mobile-menu__link js-mob-link active"><span>About US</span><i class="fa fa-angle-right"></i></a>
+					<div class="mobile-menu__submenu">
+						<a href="#"><i class="fa fa-angle-left"></i><span>About US</span></a>
+						<ul>
+							<li><a href="#">Introduction to Ukraine</a></li>
+							<li><a class="active" href="#">What We Do</a></li>
+							<li><a href="#">Strategy</a></li>
+							<li><a href="#">History</a></li>
+							<li><a href="#">Board of Directors</a></li>
+							<li><a href="#">Management</a></li>
+							<li><a href="#">Our Clients</a></li>
+							<li><a href="#">Corporate Responsibility</a></li>
+							<li><a href="#">Career</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mobile-menu__list">
+					<a href="#" class="mobile-menu__link js-mob-link"><span>Our Business</span><i class="fa fa-angle-right"></i></a>
+					<div class="mobile-menu__submenu">
+						<a href="#"><i class="fa fa-angle-left"></i><span>Our Business</span></a>
+						<ul>
+							<li><a href="#">Heat Energy Production</a></li>
+							<li><a href="#">Pellet Production</a></li>
+							<li><a href="#">Energy Willow Cultivation</a></li>
+							<li><a href="#">Heat Facilities Manufacturing</a></li>
+							<li><a href="#">Heat Facilities Maintenance</a></li>
+							<li><a href="#">Heat Sales</a></li>
+							<li><a href="#">Pellet Sales</a></li>
+							<li><a href="#">Supply Chain Management</a></li>
+							<li><a href="#">Locations</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mobile-menu__list"><a href="#" class="mobile-menu__link js-mob-link"><span>Investor Relations</span><i class="fa fa-angle-right"></i></a></li>
+				<li class="mobile-menu__list"><a href="#" class="mobile-menu__link js-mob-link"><span>Corporate Responsibility</span><i class="fa fa-angle-right"></i></a></li>
+				<li class="mobile-menu__list">
+					<a href="#" class="mobile-menu__link js-mob-link"><span>Press Centre</span><i class="fa fa-angle-right"></i></a>
+					<div class="mobile-menu__submenu">
+						<a href="#"><i class="fa fa-angle-left"></i><span>Press Centre</span></a>
+						<ul>
+							<li><a href="#">Press Peleases</a></li>
+							<li><a href="#">Monthly Reports</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mobile-menu__list"><a href="#" class="mobile-menu__link js-mob-link"><span>Career</span><i class="fa fa-angle-right"></i></a></li>
+				<li class="mobile-menu__list"><a href="#" class="mobile-menu__link js-mob-link"><span>Contact us</span><i class="fa fa-angle-right"></i></a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 <!-- END mobile-menu-->

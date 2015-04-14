@@ -1,14 +1,21 @@
 head.ready(function() {
 
-	// tablet menu
-	$(".js-tablet-btn").click(function() {
-		$(".js-tablet-menu").addClass("active");
-		return false
+	// tablet, mobile menu
+	$(".js-btn").click(function() {
+		var width = $(window).width();
+		if (width <= 939 && width >=768) {
+			$(".js-tablet-menu").addClass("active");
+		}
+		else {
+			$(".js-mobile-menu").addClass("active");
+		}
+		return false;
 	});
 
-	$(".js-tablet-close").click(function() {
+	$(".js-close").click(function() {
 		$(".js-tablet-menu").removeClass("active");
-		return false
+		$(".js-mobile-menu").removeClass("active");
+		return false;
 	});
 
 	// tablet menu dropdown
@@ -24,10 +31,16 @@ head.ready(function() {
 	  	} 
 	});
 
+	// mobile menu
+	$(".js-mob-link").click(function() {
+		$(".mobile-menu__wrap").addClass("is-open");
+		return false;
+	});
+
 	// menu
 	$(".nav__item").click(function() {
 		$(this).toggleClass("active");
-		return false
+		return false;
 	});
 
 	// career item
@@ -35,7 +48,7 @@ head.ready(function() {
 		$(this).toggleClass("active");
 		$(this).find(".fa").toggleClass("fa-plus-circle");
 		$(this).find(".fa").toggleClass("fa-minus-circle");
-		return false
+		return false;
 	});
 
 	// validation

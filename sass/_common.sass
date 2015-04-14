@@ -48,10 +48,6 @@
 // 	+jpg(bla)
 
 
-=rm($width1, $width2)
-	@media only screen and (min-width: $width1+ "px") and (max-width: $width2+ "px")
-		@content
-
 .out
 	position: relative
 	z-index: 1
@@ -64,10 +60,10 @@ body
 .center
 	width: 940px
 	margin: 0 auto
-	+rm(767, 939)
+	+r(939)
 		width: auto
 		margin: 0 30px
-	+rm(320, 767)
+	+r(767)
 		width: auto
 		margin: 0 20px
 
