@@ -54,23 +54,43 @@ head.ready(function() {
 	 };
 
 	// contact map
-	function initialize() {
+	function initialize0() {
 	  var myLatlng = new google.maps.LatLng(50.447378, 30.523349);
-	  var mapOptions = {
+	  var mapOptions0 = {
 	    zoom: 17,
 	    center: myLatlng
 	  }
-	  var map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
+	  var map0 = new google.maps.Map(document.getElementById('contact-map'), mapOptions0);
 
 	  var marker = new google.maps.Marker({
 	      position: myLatlng,
-	      map: map,
+	      map: map0,
 	      title: 'Hello World!'
 	  });
 	}
 
 	if ($('#contact-map').length){
-		google.maps.event.addDomListener(window, 'load', initialize);
+		google.maps.event.addDomListener(window, 'load', initialize0);
+	}
+
+	// contact map mobile
+	function initialize1() {
+	  var myLatlng = new google.maps.LatLng(50.447378, 30.523349);
+	  var mapOptions1 = {
+	    zoom: 17,
+	    center: myLatlng
+	  }
+	  var map = new google.maps.Map(document.getElementById('contact-map-mob'), mapOptions1);
+
+	  var marker = new google.maps.Marker({
+	      position: myLatlng,
+	      map: map1,
+	      title: 'Hello World!'
+	  });
+	}
+
+	if ($('#contact-map-mob').length){
+		google.maps.event.addDomListener(window, 'load', initialize1);
 	}
 	
 	// location map
@@ -87,41 +107,41 @@ head.ready(function() {
 	    zoom: 6,
 	    center: myLatlng
 	  }
-	  var map1 = new google.maps.Map(document.getElementById('location-map'), mapOptions2);
+	  var map2 = new google.maps.Map(document.getElementById('location-map'), mapOptions2);
 	 
 	  var marker1 = new google.maps.Marker({
 	      position: pos1,
-	      map: map1,
+	      map: map2,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	        
 	  var marker2 = new google.maps.Marker({
 	      position: pos2,
-	      map: map1,
+	      map: map2,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	        
 	  var marker3 = new google.maps.Marker({
 	      position: pos3,
-	      map: map1,
+	      map: map2,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	        
 	  var marker4 = new google.maps.Marker({
 	      position: pos4,
-	      map: map1,
+	      map: map2,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 
 	  var marker5 = new google.maps.Marker({
 	      position: pos5,
-	      map: map1,
+	      map: map2,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 
 	  var marker6 = new google.maps.Marker({
 	      position: pos6,
-	      map: map1,
+	      map: map2,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	    
