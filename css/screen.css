@@ -43,7 +43,7 @@ sup { vertical-align: top; }
 
 .header { background: url("../img/header_bg.jpg") no-repeat; background-size: cover; }
 .header__in { padding: 25px 0; }
-@media only screen and (min-width: 768px) { .header__in { padding: 15px 0; } }
+@media only screen and (max-width: 939px) { .header__in { padding: 15px 0; } }
 .header__in .logo { float: left; width: 25.53191%; }
 .header__in .logo a { display: block; }
 .header__in .nav { float: right; padding: 27px 0; width: 74.46809%; }
