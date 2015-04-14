@@ -48,8 +48,8 @@
 // 	+jpg(bla)
 
 
-=rm($width)
-	@media only screen and (min-width: $width+ "px")
+=rm($width1, $width2)
+	@media only screen and (min-width: $width1+ "px") and (max-width: $width2+ "px")
 		@content
 
 .out
@@ -64,10 +64,10 @@ body
 .center
 	width: 940px
 	margin: 0 auto
-	+r(939)
+	+rm(767, 939)
 		width: auto
 		margin: 0 30px
-	+r(767)
+	+rm(320, 767)
 		width: auto
 		margin: 0 20px
 
@@ -78,6 +78,8 @@ a
 	text-decoration: none
 	&:hover
 		text-decoration: underline
+		+r(768)
+			text-decoration: none
 	
 sup
 	vertical-align: top

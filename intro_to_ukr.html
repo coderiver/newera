@@ -23,6 +23,7 @@
 				<div class="logo">
 					<a href="#"><img src="img/logo_en.png" alt=""></a>
 				</div>
+				<a class="menu-btn js-tablet-btn js-mobile-btn" href="#"><span></span></a>
 				<nav class="nav clr">
 					<ul class="nav__menu">
 						<li class="nav__item">
@@ -78,63 +79,67 @@
 	<!-- END header -->
 	<!-- BEGIN main -->
 	<div class="main">
-		<div class="center clr">
-			<aside class="sidebar">
-				<ul>
-					<li><a class="active" href="#">Introduction to Ukraine</a></li>
-					<li><a href="#">What We Do </a></li>
-					<li><a href="#">Strategy</a></li>
-					<li><a href="#">History</a></li>
-					<li><a href="#">Board of Directors</a></li>
-					<li><a href="#">Management</a></li>
-					<li><a href="#">Our Clients</a></li>
-					<li><a href="#">Corporate Responsibility</a></li>
-					<li><a href="#">Career</a></li>
-				</ul>
-			</aside>
-			<div class="main__wrap">
+		<div class="center">
+			<div class="main__top">
 				<div class="breadcrumbs">
 					<a href="#">Home</a> /
 					<a class="active" href="#">About Us:</a>
 				</div>
 				<h4 class="main__title">Introduction to Ukraine</h4>
-				<div class="intro">
-					<div class="intro__map">
-						<img src="img/map_ukr.jpg" alt="">
-					</div>
-					<div class="intro__text">
-						<p>Ukraine is the largest country in Europe, covering an area of 603,628 km<sup>2</sup>. Ukraine borders Poland, Slovakia, Hungary, Romania and Moldova to the west, Belarus to the north, Russia to the east and the Black Sea and Sea of Azov to the south, respectively.</p>
-					</div>
-					<div class="intro__wrap">
-						<div class="intro__item item1">
-							<img src="img/svg/fire.svg" alt="">
-							<p><span>96,5</span> mln. Gcal</p>
-							<p>of heat energy produced in 2013</p>
+			</div>
+			<div class="main__in clr">
+				<aside class="sidebar sidebar_left">
+					<ul>
+						<li><a class="active" href="#">Introduction to Ukraine</a></li>
+						<li><a href="#">What We Do </a></li>
+						<li><a href="#">Strategy</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">Board of Directors</a></li>
+						<li><a href="#">Management</a></li>
+						<li><a href="#">Our Clients</a></li>
+						<li><a href="#">Corporate Responsibility</a></li>
+						<li><a href="#">Career</a></li>
+					</ul>
+				</aside>
+				<div class="main__wrap">
+					<div class="intro">
+						<div class="intro__map">
+							<img src="img/map_ukr.jpg" alt="">
 						</div>
-						<div class="intro__item item2">
-							<img src="img/svg/weather.svg" alt="">
-							<p><span>-8 ... -12°C</span></p>
-							<p>forestry wood stock in 2011</p>
+						<div class="intro__text">
+							<p>Ukraine is the largest country in Europe, covering an area of 603,628 km<sup>2</sup>. Ukraine borders Poland, Slovakia, Hungary, Romania and Moldova to the west, Belarus to the north, Russia to the east and the Black Sea and Sea of Azov to the south, respectively.</p>
 						</div>
-						<div class="intro__item item3">
-							<img src="img/svg/people.svg" alt="">
-							<p><span>43 million</span></p>
-							<p>of inhabitants</p>
-						</div>
-						<div class="intro__item item4">
-							<img src="img/svg/water_drop.svg" alt="">
-							<p><span>41,5</span> bln. m<sup>3</sup></p>
-							<p>natural gas consumption in 2013</p>
-						</div>
-						<div class="intro__item item5">
-							<img src="img/svg/chopped_log.svg" alt="">
-							<p><span>2,102</span> mln. m<sup>3</sup></p>
-							<p>forestry wood stock in 2011</p>
-						</div>
-						<div class="intro__item item6">
-							<img src="img/svg/banknotes.svg" alt="">
-							<p><span>$180</span></p>
-							<p>average monthly salary in Ukraine</p>
+						<div class="intro__wrap">
+							<div class="intro__item item1">
+								<img src="img/svg/fire.svg" alt="">
+								<p><span>96,5</span> mln. Gcal</p>
+								<p>of heat energy produced in 2013</p>
+							</div>
+							<div class="intro__item item2">
+								<img src="img/svg/weather.svg" alt="">
+								<p><span>-8 ... -12°C</span></p>
+								<p>forestry wood stock in 2011</p>
+							</div>
+							<div class="intro__item item3">
+								<img src="img/svg/people.svg" alt="">
+								<p><span>43 million</span></p>
+								<p>of inhabitants</p>
+							</div>
+							<div class="intro__item item4">
+								<img src="img/svg/water_drop.svg" alt="">
+								<p><span>41,5</span> bln. m<sup>3</sup></p>
+								<p>natural gas consumption in 2013</p>
+							</div>
+							<div class="intro__item item5">
+								<img src="img/svg/chopped_log.svg" alt="">
+								<p><span>2,102</span> mln. m<sup>3</sup></p>
+								<p>forestry wood stock in 2011</p>
+							</div>
+							<div class="intro__item item6">
+								<img src="img/svg/banknotes.svg" alt="">
+								<p><span>$180</span></p>
+								<p>average monthly salary in Ukraine</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -167,6 +172,86 @@
 	<!-- END footer -->
 </div>
 <!-- END out-->
+<!-- BEGIN tablet-menu-->
+<div class="tablet-menu js-tablet-menu">
+	<div class="tablet-menu__in">
+		<div class="lang lang_tablet">
+			<a class="lang__item active" href="#">En</a>
+			<a class="lang__item" href="#">РУ</a>
+		</div>
+		<div class="tablet-menu__close js-tablet-close"><i class="fa fa-times fa-5x"></i></div>
+		<ul class="tablet-menu__list">
+			<li class="dropdown">
+				<a href="#" class="tablet-menu__link js-tablet-dropdown">About US</a>
+				<ul class="dropdown__list">
+					<li><a href="#">Introduction to Ukraine</a></li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">Strategy</a></li>
+					<li><a href="#">History</a></li>
+					<li><a href="#">Board of Directors</a></li>
+					<li><a href="#">Management</a></li>
+					<li><a href="#">Our Clients</a></li>
+					<li><a href="#">Corporate Responsibility</a></li>
+					<li><a href="#">Career</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="tablet-menu__link js-tablet-dropdown">Our Business</a>
+				<ul class="dropdown__list">
+					<li><a href="#">Heat Energy Production</a></li>
+					<li><a href="#">Pellet Production</a></li>
+					<li><a href="#">Energy Willow Cultivation</a></li>
+					<li><a href="#">Heat Facilities Manufacturing</a></li>
+					<li><a href="#">Heat Facilities Maintenance</a></li>
+					<li><a href="#">Heat Sales</a></li>
+					<li><a href="#">Pellet Sales</a></li>
+					<li><a href="#">Supply Chain Management</a></li>
+					<li><a href="#">Locations</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Investor Relations</a>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Corporate Responsibility</a>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="tablet-menu__link js-tablet-dropdown">Press Centre</a>
+				<ul class="dropdown__list">
+					<li><a href="#">Press Peleases</a></li>
+					<li><a href="#">Monthly Reports</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Career</a>
+			</li>
+			<li>
+				<a href="#" class="tablet-menu__link">Contact us</a>
+		</li>
+		</ul>
+	</div>
+</div>
+<!-- END tablet-menu-->
+<!-- BEGIN mobile-menu-->
+<div class="mobile-menu">
+	<div class="mobile-menu__in">
+		<div class="lang lang_mobile">
+			<a class="active" href="#">En</a>
+			<a href="#">РУ</a>
+		</div>
+		<div class="mobile-menu__close"></div>
+		<ul class="mobile-menu__list">
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+			<li><a href="#" class="mobile-menu__link"></a></li>
+		</ul>
+	</div>
+</div>
+<!-- END mobile-menu-->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

@@ -1,21 +1,13 @@
 head.ready(function() {
 
 	// tablet menu
-	$(".js-btn").click(function() {
-		var width = $(window).width();
-		if (width <= 939) {
-			$(".js-tablet-menu").addClass("active");
-		}
-		else if(width <= 767) {
-			$(".js-mobile-menu").addClass("active");
-		}
-		
+	$(".js-tablet-btn").click(function() {
+		$(".js-tablet-menu").addClass("active");
 		return false
 	});
 
 	$(".js-tablet-close").click(function() {
 		$(".js-tablet-menu").removeClass("active");
-		$(".js-mobile-menu").removeClass("active");
 		return false
 	});
 
