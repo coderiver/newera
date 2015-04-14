@@ -1,5 +1,6 @@
 head.ready(function() {
 
+<<<<<<< HEAD
 	// tablet, mobile menu
 	$(".js-btn").click(function() {
 		var width = $(window).width();
@@ -10,13 +11,31 @@ head.ready(function() {
 			$(".js-mobile-menu").addClass("active");
 		}
 		return false;
+=======
+	
+	// tablet menu
+	$(".js-btn").click(function() {
+		var width = $(window).width();
+		if (width <= 939) {
+			$(".js-tablet-menu").addClass("active");
+		}
+		else if(width <= 767) {
+			$(".js-mobile-menu").addClass("active");
+		}
+		return false
+>>>>>>> f639dc18840f50f780b7b901e8925da77bad082f
 	});
 
 	$(".js-close").click(function() {
 		$(".js-tablet-menu").removeClass("active");
 		$(".js-mobile-menu").removeClass("active");
+<<<<<<< HEAD
 		return false;
+=======
+		return false
+>>>>>>> f639dc18840f50f780b7b901e8925da77bad082f
 	});
+
 
 	// tablet menu dropdown
 	$('.js-tablet-dropdown').on('click', function(){
@@ -67,43 +86,23 @@ head.ready(function() {
 	 };
 
 	// contact map
-	function initialize0() {
+	function initialize() {
 	  var myLatlng = new google.maps.LatLng(50.447378, 30.523349);
-	  var mapOptions0 = {
+	  var mapOptions = {
 	    zoom: 17,
 	    center: myLatlng
 	  }
-	  var map0 = new google.maps.Map(document.getElementById('contact-map'), mapOptions0);
+	  var map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
 
 	  var marker = new google.maps.Marker({
 	      position: myLatlng,
-	      map: map0,
+	      map: map,
 	      title: 'Hello World!'
 	  });
 	}
 
 	if ($('#contact-map').length){
-		google.maps.event.addDomListener(window, 'load', initialize0);
-	}
-
-	// contact map mobile
-	function initialize1() {
-	  var myLatlng = new google.maps.LatLng(50.447378, 30.523349);
-	  var mapOptions1 = {
-	    zoom: 17,
-	    center: myLatlng
-	  }
-	  var map = new google.maps.Map(document.getElementById('contact-map-mob'), mapOptions1);
-
-	  var marker = new google.maps.Marker({
-	      position: myLatlng,
-	      map: map1,
-	      title: 'Hello World!'
-	  });
-	}
-
-	if ($('#contact-map-mob').length){
-		google.maps.event.addDomListener(window, 'load', initialize1);
+		google.maps.event.addDomListener(window, 'load', initialize);
 	}
 	
 	// location map
@@ -120,41 +119,41 @@ head.ready(function() {
 	    zoom: 6,
 	    center: myLatlng
 	  }
-	  var map2 = new google.maps.Map(document.getElementById('location-map'), mapOptions2);
+	  var map1 = new google.maps.Map(document.getElementById('location-map'), mapOptions2);
 	 
 	  var marker1 = new google.maps.Marker({
 	      position: pos1,
-	      map: map2,
+	      map: map1,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	        
 	  var marker2 = new google.maps.Marker({
 	      position: pos2,
-	      map: map2,
+	      map: map1,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	        
 	  var marker3 = new google.maps.Marker({
 	      position: pos3,
-	      map: map2,
+	      map: map1,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	        
 	  var marker4 = new google.maps.Marker({
 	      position: pos4,
-	      map: map2,
+	      map: map1,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 
 	  var marker5 = new google.maps.Marker({
 	      position: pos5,
-	      map: map2,
+	      map: map1,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 
 	  var marker6 = new google.maps.Marker({
 	      position: pos6,
-	      map: map2,
+	      map: map1,
 	      title: 'Head Office 13b Staronavodnitskaya st., Kyiv Ukraine'
 	  });
 	    
