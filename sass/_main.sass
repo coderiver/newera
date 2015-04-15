@@ -18,12 +18,13 @@
 			width: percentage(700/940) 
 			&__menu
 				float: left
-				margin: 0 40px 0 -10px
+				margin: 0 20px 0 -10px
 				li
 					display: inline-block
 					padding: 0 10px 
 					height: 40px
 					a
+						font-size: 14px
 						i
 							color: $yellow
 							vertical-align: top
@@ -189,14 +190,19 @@
 		right: 20px
 		i
 			color: #FFF 
-	&__wrap
+	&__wrapper
 		margin: 40px 0
 		overflow: hidden
 		position: relative
 		&.is-open
-			+transform(translateX(-110%))
-			.mobile-menu__submenu
-				left: 20px
+			.mobile-menu__wrap
+				left: -110%
+	&__wrap
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
 	&__list
 		padding: 10px 0
 		width: 100%
@@ -218,14 +224,20 @@
 				border-bottom: 2px solid #59db31
 	&__submenu
 		position: absolute
-		top: 10px
+		top: 0
 		left: 100%
+		&.is-open
+			left: 20px
 		a
 			font-weight: lighter
 			font-size: 22px
 			color: #FFF 
+			i
+				margin-right: 10px
 		ul
+			margin-right: 20px
 			li
+				padding: 10px 0
 				> a
 					font-weight: lighter
 					font-size: 16px
@@ -250,6 +262,7 @@
 		p
 			padding: 25px 0
 			font-size: 16px
+			line-height: 1.5
 	&__more
 		a
 			font-weight: bold
@@ -387,12 +400,13 @@
 		a
 			font-size: 13px
 			color: #3675AA
+			line-height: 1.6
 			&:visited
 				color: #6D36AA
 			&:hover
 				color: #469E2C  
 		p
-			padding-top: 25px
+			padding-top: 15px
 			font-size: 12px
 			color: #9A9A9A
 			+r(767)
@@ -469,7 +483,7 @@
 		font-weight: lighter
 		font-size: 36px
 		color: #377f25
-		margin-top: 20px
+		margin-top: 10px
 	&__in
 		padding: 30px 0
 	&__wrap
@@ -541,7 +555,8 @@
 	p
 		font-size: 16px
 		color: #333
-		padding-bottom: 20px
+		line-height: 1.5
+		padding-bottom: 10px
 	> ul
 		li
 			position: relative
@@ -582,7 +597,8 @@
 			color: #9A9A9A
 		p
 			font-size: 13px
-			padding-top: 15px
+			line-height: 1.6
+			padding-top: 10px
 
 
 // career.html
@@ -595,7 +611,8 @@
 	p
 		font-size: 16px
 		color: #333
-		padding-bottom: 25px
+		line-height: 1.5
+		padding-bottom: 15px
 	ul
 		li
 			display: block
@@ -639,11 +656,25 @@
 			+r(939)
 				margin: 0 -20px
 			label
+				position: relative
 				+r(939)
 					display: inline-block
+					width: 45%
 					margin-left: 20px
 				+r(767)
 					display: block
+					margin: 0 auto
+					width: 90%
+				i
+					display: none
+					position: absolute
+					top: 0
+					right: 10px
+					color: #e30613
+					font-size: 20px
+				&.has-error
+					i.fa
+						display: block
 			p
 				text-transform: uppercase
 				color: #737373
@@ -656,9 +687,7 @@
 				border: 1px solid #dadada
 				+box 
 				+r(939)
-					width: 230px
-				+r(767)
-					width: 95%
+					width: 100%
 			textarea
 				margin-top: 15px
 				width: 180px
@@ -668,9 +697,14 @@
 				resize: none
 				+box
 				+r(939)
-					width: 480px
+					width: 94%
+					margin: 15px 20px 0
 				+r(767)
-					width: 95%
+					margin: 15px 30px 0
+					width: 90%
+				+r(500)
+					margin: 15px 15px 0
+					
 			button
 				margin-top: 15px
 				text-align: center
@@ -680,14 +714,16 @@
 				background: #469e2c
 				+box
 				+r(939)
-					width: 230px
+					width: 94%
 					margin-right: 15px
 					float: right
 				+r(767)
-					width: 91%
+					margin-left: 30px
 					float: none
+					width: 90%
+				+r(500)
 					margin-right: 0
-					margin-left: 20px
+					margin-left: 15px
 				&:disabled
 					background: #a2ce95
 					cursor: default
@@ -706,6 +742,27 @@
 			padding-top: 20px
 			font-size: 14px
 			color: #333
+input.valid
+	border-color: #59db31 !important
+	box-shadow: 0 0 10px 0 #59db31
+input.error
+	border-color: #ee9172 !important
+	box-shadow: 0 0 10px 0 #ee9172
+span.help-block
+	position: relative
+	display: block
+	width: 215px
+	margin: 2px 0 0 55px
+	background: #333
+	padding: 15px 20px
+	color: #FFF
+	+box
+	&:before
+		content: ""
+		position: absolute
+		top: -8px
+		left: 98px
+		+arr(16, 8, #333, t)
 
 
 // contact_us.html
@@ -731,13 +788,13 @@
 			color: #3675aa
 			&:hover
 				color: #469e2c
-#contact-map
+.contact-map
 	width: 230px
 	height: 290px
 	margin-left: -30px
 	+r(939)
 		width: 180px
-#contact-map-mob
+.contact-map-mob
 	display: none
 	width: 280px
 	height: 195px
@@ -753,9 +810,10 @@
 		p
 			display: block
 			overflow: hidden
-			padding-top: 13px
-			font-size: 13px
+			padding-top: 12px
+			font-size: 16px
 			color: #333
+			line-height: 1.5
 			+r(767)
 				padding-top: 0
 		&:last-child .history__year:after
@@ -799,8 +857,9 @@
 		+r(767)
 			width: 100%
 		p
-			font-size: 13px
+			font-size: 16px
 			color: #333
+			line-height: 1.5
 	&__wrap
 		font-size: 0
 		margin: 10px 0 30px 10px
@@ -856,11 +915,21 @@
 
 
 // locations.html
-#location-map
+.location-map
 	width: 100%
 	height: 500px
 	+r(767)
 		height: 300px
+.infobox-wrapper
+	display: none
+.marker-info
+	&__head
+		font-size: 16px
+		font-weight: bold
+		color: #59c839
+	&__address
+		font-size: 14px
+		color: #000
 
 
 // monthly_reports.html
@@ -892,9 +961,10 @@
 	&__wrap
 		p
 			width: percentage(550/700)
-			padding-bottom: 15px
+			padding-bottom: 12px
 			font-size: 16px
 			color: #333
+			line-height: 1.5
 			+r(939)
 				width: 100%
 		table
@@ -918,7 +988,9 @@
 				&:nth-child(2)
 					padding-right: 50px
 					+r(767)
-						padding-right: 5px
+						padding-right: 30px
+					+r(450)
+						padding-right: 15px
 				&:nth-child(2n)
 					text-align: right
 			th
@@ -969,19 +1041,63 @@
 		p
 			font-size: 14px
 			color: #333
-			padding-top: 20px
+			padding-top: 10px
+			line-height: 1.6
 
 // press_centre.html
-.main__title
+.years
+	position: relative
+	display: inline-block
 	a
 		color: #3675aa
+		position: relative
 		i
 			color: #9A9A9A
 			vertical-align: top
-			padding: 15px 0 0 15px
+			margin: 15px 0 0 15px
 			font-size: 16px
 		&:hover
 			color: #469e2c
+			text-decoration: underline 
+	&.active
+		.years__top
+			color: #469e2c
+			text-decoration: none
+		.fa
+			vertical-align: bottom
+			margin: 15px 0 15px 15px
+			+tr(transform 200ms)
+			+rotate(180)
+		.years__submenu
+			display: block
+	&__submenu
+		display: none
+		position: absolute
+		top: 40px
+		right: 0
+		background: #FFF
+		border-top: 1px solid #59db31
+		border-bottom: 1px solid #59db31
+		width: 100%
+		padding: 0 20px
+		z-index: 2
+		box-shadow: 0px 0px 10px -1px #333
+		+box
+		li
+			display: block
+			padding: 0 0 5px 0
+			height: auto
+			&:last-child
+				padding-bottom: 0
+			a
+				font-size: 14px
+				color: #333
+				padding: 0
+				font-weight: normal
+				&:hover
+					color: #469e2c
+					text-decoration: underline 
+
 .presscentre
 	&__item
 		padding-bottom: 35px
@@ -993,7 +1109,7 @@
 		p
 			font-size: 13px
 			color: #333
-			padding: 20px 0
+			padding: 12px 0
 		span
 			font-size: 13px
 			color: #9a9a9a
