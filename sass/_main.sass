@@ -96,6 +96,7 @@
 	&_tablet
 		float: none
 		a
+			display: inline-block
 			font-size: 14px 
 .menu-btn
 	display: none
@@ -176,38 +177,51 @@
 	bottom: 0
 	left: 0
 	text-align: left
-	padding-top: 40px
 	background: url("../img/bg_mobile.png") left bottom no-repeat, linear-gradient(#469e2c, #347b24)
 	overflow-y: auto
 	z-index: 99
 	&.active
 		display: block
 	&__in
-		padding: 20px
+		position: relative
+		padding: 50px 23px 20px 28px
+		+box
+		height: 100vh
+	&__top
+		position: relative	 
 	&__close
 		position: absolute
-		top: 50px
-		right: 20px
+		top: 50%
+		margin-top: -18px 
+		right: 0
 		i
 			color: #FFF 
 	&__wrapper
-		margin: 40px 0
 		overflow: hidden
-		position: relative
+		position: absolute
+		top: 120px
+		bottom: 20px
+		right: 0px
+		left: 0px
+		padding: 0 23px 0 28px 
 		&.is-open
 			.mobile-menu__wrap
 				left: -110%
 	&__wrap
 		position: absolute
 		top: 0
-		right: 0
-		left: 0
+		right: 23px
+		left: 28px
 		bottom: 0
+		+tr(transform 200ms)
+		&.is-open
+			+transform(translateX(-100%))
+			.mobile-menu__link
+				i
+					display: none
 	&__list
 		padding: 10px 0
-		width: 100%
 	&__link
-		width: 100%
 		position: relative
 		display: block
 		font-weight: lighter
@@ -225,26 +239,28 @@
 	&__submenu
 		position: absolute
 		top: 0
+		bottom: 0
+		width: 100%
 		left: 100%
 		&.is-open
 			left: 20px
-		a
-			font-weight: lighter
-			font-size: 22px
-			color: #FFF 
-			i
-				margin-right: 10px
 		ul
-			margin-right: 20px
 			li
 				padding: 10px 0
-				> a
+				a
 					font-weight: lighter
 					font-size: 16px
 					color: #FFF 
 					&.active
 						color: $yellow
 						border-bottom: 2px solid #59db31
+.mob-back
+	margin-left: -18px
+	font-weight: lighter
+	font-size: 22px
+	color: #FFF 
+	i
+		margin-right: 10px					
 .topper
 	background: radial-gradient(at top, #469e2c, #337823)
 	color: #FFF 
@@ -923,13 +939,55 @@ span.help-block
 .infobox-wrapper
 	display: none
 .marker-info
+	position: relative
+	padding: 17px
+	width: 220px
+	+box
+	background: url(../img/bg-point.png)
+	+cover
+	&:after
+		content: ""
+		position: absolute
+		top: 100%
+		left: 50%
+		margin-left: -5px 
+		+arr(16, 8, #333, b) 
 	&__head
 		font-size: 16px
 		font-weight: bold
 		color: #59c839
 	&__address
 		font-size: 14px
-		color: #000
+		color: #fff  
+// locations map
+/* white background and box outline */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div
+	/* we have to use !important because we are overwritng inline styles */
+	background-color: transparent !important
+	box-shadow: none !important
+	width: auto !important
+	height: auto !important
+	border-top-width: 10px!important
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child
+	display: none!important
+/* arrow colour */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div > div > div
+	background-color: #333 !important
+/* close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
+	margin-right: 5px
+	margin-top: 5px
+/* image icon inside close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img
+	display: none
+/* positioning of infowindow */
+.gm-style-iw
+	top: 33px !important
+	left: 22px !important
+	& > div
+		overflow: visible!important
+		& > div
+			overflow: visible!important	
 
 
 // monthly_reports.html
@@ -972,6 +1030,9 @@ span.help-block
 			font-size: 14px
 			color: #333
 			text-align: left
+			+r(400)
+				font-size: 12px
+				margin-left: -10px
 			tr
 				border-bottom: 1px solid #dadada
 				&:first-child
