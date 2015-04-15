@@ -1,6 +1,5 @@
 head.ready(function() {
 
-<<<<<<< HEAD
 	// tablet, mobile menu
 	$(".js-btn").click(function() {
 		var width = $(window).width();
@@ -11,29 +10,12 @@ head.ready(function() {
 			$(".js-mobile-menu").addClass("active");
 		}
 		return false;
-=======
-	
-	// tablet menu
-	$(".js-btn").click(function() {
-		var width = $(window).width();
-		if (width <= 939) {
-			$(".js-tablet-menu").addClass("active");
-		}
-		else if(width <= 767) {
-			$(".js-mobile-menu").addClass("active");
-		}
-		return false
->>>>>>> f639dc18840f50f780b7b901e8925da77bad082f
 	});
 
 	$(".js-close").click(function() {
 		$(".js-tablet-menu").removeClass("active");
 		$(".js-mobile-menu").removeClass("active");
-<<<<<<< HEAD
 		return false;
-=======
-		return false
->>>>>>> f639dc18840f50f780b7b901e8925da77bad082f
 	});
 
 
