@@ -76,7 +76,7 @@
 				padding: 10px 0
 				color: #FFF 
 				+box 
-			+r(768)
+			+r(939)
 				display: none
 	&_main
 		background: none
@@ -96,7 +96,6 @@
 		float: none
 		a
 			font-size: 14px 
-
 .menu-btn
 	display: none
 	padding: 42px 0
@@ -118,9 +117,8 @@
 			top: -9px
 		&:after
 			top: 9px
-	+r(768)
+	+r(939)
 		display: block
-
 .tablet-menu
 	display: none
 	position: fixed
@@ -149,7 +147,6 @@
 		font-weight: lighter
 		font-size: 30px
 		color: #FFF 
-
 .dropdown
 	.tablet-menu__link
 		&:after
@@ -170,7 +167,6 @@
 			padding: 5px 0
 			a
 				font-size: 24px
-
 .mobile-menu
 	display: none
 	position: fixed
@@ -237,15 +233,17 @@
 					&.active
 						color: $yellow
 						border-bottom: 2px solid #59db31
-
 .topper
 	background: radial-gradient(at top, #469e2c, #337823)
 	color: #FFF 
 	&__wrap
-		width: 500px
+		width: percentage(500/940)
 		margin: 0 auto
 		padding: 90px 0 165px
 		text-align: center
+		+r(767)
+			width: 100%
+			padding: 5px 0 45px
 		h2
 			font-weight: lighter
 			font-size: 36px
@@ -257,10 +255,17 @@
 			font-weight: bold
 			font-size: 14px
 			color: #FFF 
+			+r(767)
+				display: inline-block
+				vertical-align: top
+				width: 100px
 			i
 				color: $yellow
 				vertical-align: middle
 				padding-right: 10px
+				+r(767)
+					display: block
+					margin-bottom: 10px
 			&:first-child
 				margin-right: 35px
 .production
@@ -277,41 +282,54 @@
 			font-size: 12px
 			color: #9A9A9A 
 	&__wrap
-		padding: 25px 0
+		padding: 35px 0
 		font-size: 0
 	&__item
 		width: 240px
 		height: 240px
-		margin-left: -10px
-		padding: 30px
+		margin: -10px 0 0 -10px
+		padding: 20px 40px
 		display: inline-block
 		vertical-align: top
 		webkit-border-radius: 50% 
 		border-radius: 50%
 		+box
+		+r(767)
+			margin-left: 0
 		p
 			font-size: 16px
+			padding-top: 10px
 			&:nth-child(2)
 				font-weight: 600
+		.counter ul li p
+			color: #333			
 		&.item1
 			border: 10px solid rgba(229, 121, 0, 0.3)
 			margin-left: 10px
-			+r(939)
+			+r(767)
 				margin-left: 0
 			p, .counter__item p
 				color: rgb(229, 121, 0)
+			.counter__item
+				border: 1px solid rgb(229, 121, 0)
 		&.item2
 			border: 10px solid rgba(0, 159, 227, 0.3)
-			p
+			p, .counter__item p
 				color: rgb(0, 159, 227)
+			.counter__item
+				border: 1px solid rgb(0, 159, 227)
 		&.item3
 			border: 10px solid rgba(175, 134, 85, 0.3)
-			p
+			p, .counter__item p
 				color: rgb(175, 134, 85)
+			.counter__item
+				border: 1px solid rgb(175, 134, 85)
 		&.item4
 			border: 10px solid rgba(47, 112, 170, 0.3)
-			p
+			p, .counter__item p
 				color: rgb(47, 112, 170)
+			.counter__item
+				border: 1px solid rgb(47, 112, 170)
 	a
 		font-size: 14px
 		font-weight: bold
@@ -322,6 +340,22 @@
 			padding-right: 10px
 		&:hover
 			color: #469E2C 
+.counter
+	margin: 15px -20px 5px
+	ul
+		li
+			width: 22px
+			display: inline-block
+			vertical-align: middle
+			border: 1px solid #dadada
+			webkit-border-radius: 2px
+			border-radius: 2px
+			margin-left: 1px
+			p
+				padding: 0
+				font-family: 'Open Sans Condensed', sans-serif
+				font-weight: lighter
+				font-size: 27px
 .news
 	&__in
 		border-top: 1px solid #dadada  
@@ -331,6 +365,10 @@
 		width: 25%
 		display: inline-block
 		vertical-align: top
+		+r(767)
+			width: 100%
+			display: block
+			text-align: center
 		h3
 			font-weight: lighter
 			font-size: 24px
@@ -341,6 +379,11 @@
 		vertical-align: top
 		padding: 0 20px
 		+box
+		+r(767)
+			width: 100%
+			display: block
+			text-align: center				
+			margin-top: 25px
 		a
 			font-size: 13px
 			color: #3675AA
@@ -352,6 +395,8 @@
 			padding-top: 25px
 			font-size: 12px
 			color: #9A9A9A
+			+r(767)
+				padding-top: 10px
 		&:before
 			content: ""
 			position: absolute
@@ -360,19 +405,32 @@
 			height: 1px
 			width: 13px
 			background: #4eaf30
+			+r(767)
+				display: none
 .footer
 	&__in
 		padding: 20px 0
 		border-top: 2px solid #469e2c
+		+r(939)
+			text-align: center
 	&__menu
 		float: left
+		+r(939)
+			float: none
 		ul
 			margin: 0 -10px
 			li
 				display: inline-block
 				padding: 10px
+				+r(939)
+					padding: 5px 5px 20px
+				+r(767)
+					width: 100%
+					display: block
+					text-align: center
 				a
 					display: inline-block
+					font-size: 14px
 					color: #000
 					&:visited
 						color: #000 
@@ -382,6 +440,8 @@
 						color: #469E2C
 	.copyright
 		float: right
+		+r(939)
+			float: none
 		p
 			font-size: 13px
 			color: #9A9A9A 
@@ -392,6 +452,9 @@
 	&__top
 		margin-top: 30px
 		padding-left: percentage(240/940) 
+		+r(767)
+			width: 100%
+			padding: 0
 		.breadcrumbs
 			a
 				font-size: 12px
@@ -412,15 +475,25 @@
 	&__wrap
 		width: percentage(700/940)
 		float: left
-		&.wrap-center
-			width: percentage(480/940)
+		+box
+		+r(767)
+			width: 100%
 		&.wrap-right
 			width: percentage(530/940)
 			padding-right: 30px
+			+r(939)
+				width: percentage(365/939)
+				padding-right: 10px
+			+r(767)
+				width: 100%
 .sidebar
 	width: percentage(240/940)
 	float: left
+	+r(939)
+		padding-bottom: 70px
 	ul
+		+r(939)
+			width: percentage(170/240)
 		li
 			padding-bottom: 20px
 			a
@@ -433,13 +506,25 @@
 					color: #333333
 					border-bottom: 2px solid #469e2c
 					text-decoration: none
+					+r(939)
+						padding-bottom: 0
+	&_left
+		+r(767)
+			display: none
 	&_right
-		width: percentage(140/940)
+		width: 140px
 		text-align: center
 		float: right
+		+r(767)
+			width: 100%
+			padding-bottom: 0
 	&__wrap
 		border: 1px solid #dadada
 		padding: 20px
+		width: 140px
+		+box
+		+r(939)
+			width: 100%
 		a
 			font-size: 16px
 			color: #3675aa
@@ -477,12 +562,19 @@
 		padding-bottom: 50px
 	&__pic
 		float: left
+		+r(767)
+			float: none
+			text-align: center
 	&__wrap
 		float: left
 		margin-left: 25px
 		width: percentage(520/700)
 		font-size: 16px
 		color: #333
+		+r(767)
+			width: 100%
+			margin: 0
+			text-align: justify
 		h4
 			font-weight: bold
 			padding-bottom: 5px
@@ -495,6 +587,11 @@
 
 // career.html
 .career
+	float: left
+	width: percentage(480/700)
+	margin-bottom: 20px
+	+r(939)
+		width: 100%
 	p
 		font-size: 16px
 		color: #333
@@ -525,9 +622,15 @@
 						text-decoration: none
 				&:hover
 					color: #469e2c
-.sidebar	
-	&_career
-		width: 220px
+.contacts
+	float: right
+	width: 220px
+	+r(939)
+		width: 100%
+	&__wrap
+		border: 1px solid #dadada
+		padding: 20px
+		+box
 		h5
 			font-size: 24px
 			font-weight: lighter
@@ -608,6 +711,10 @@
 // contact_us.html
 .contact
 	font-size: 0
+	float: left
+	width: percentage(480/700)
+	+r(939)
+		width: 100%
 	&__item
 		width: 210px
 		padding: 0 30px 30px 0
@@ -644,17 +751,18 @@
 .history
 	&__item
 		p
-			display: inline-block
-			width: percentage(440/530)
+			display: block
+			overflow: hidden
 			padding-top: 13px
 			font-size: 13px
 			color: #333
+			+r(767)
+				padding-top: 0
 		&:last-child .history__year:after
 			display: none
 	&__year
 		position: relative
-		display: inline-block
-		vertical-align: top
+		float: left
 		width: 60px
 		height: 60px
 		background: $yellow
@@ -668,6 +776,8 @@
 			font-weight: lighter
 			font-size: 24px
 			color: #378125
+			+r(767)
+				padding-top: 13px
 		&:after
 			content: ""
 			position: absolute
@@ -679,9 +789,15 @@
 
 // intro_to_ukr.html
 .intro
+	&__map
+		img
+			+r(939)
+				width: 100%
 	&__text
 		width: percentage(530/700)
 		margin: 30px 0
+		+r(767)
+			width: 100%
 		p
 			font-size: 13px
 			color: #333
@@ -689,6 +805,8 @@
 		font-size: 0
 		margin: 10px 0 30px 10px
 		padding-top: 10px
+		+r(767)
+			text-align: center
 	&__item
 		width: 220px
 		height: 220px
@@ -741,11 +859,15 @@
 #location-map
 	width: 100%
 	height: 500px
+	+r(767)
+		height: 300px
 
 
 // monthly_reports.html
 .reports
 	padding-bottom: 300px
+	+r(767)
+		padding-bottom: 0
 	&__item
 		position: relative
 		margin-bottom: 20px
@@ -765,7 +887,6 @@
 			font-size: 13px
 			color: #9a9a9a
 
-
 // our_business.html
 .business
 	&__wrap
@@ -774,6 +895,8 @@
 			padding-bottom: 15px
 			font-size: 16px
 			color: #333
+			+r(939)
+				width: 100%
 		table
 			margin: 40px 0
 			font-size: 14px
@@ -788,29 +911,46 @@
 					td
 						color: #469e2c
 						font-weight: bold
-			th
-				padding: 15px 0
-				font-weight: bold
-				text-transform: uppercase
 			th, td
 				padding: 10px 0
+				+r(767)
+					padding: 5px 0
 				&:nth-child(2)
 					padding-right: 50px
+					+r(767)
+						padding-right: 5px
 				&:nth-child(2n)
 					text-align: right
+			th
+				padding: 15px 0
+				text-transform: uppercase
 	&__imgs
 		font-size: 0
 		margin-left: -20px
+		+r(939)
+			margin-left: -10px
+		+r(767)
+			margin-left: 0
 		img
 			margin-left: 20px
-
-
+			+r(939)
+				width: 31.3%
+				margin-left: 10px
+			+r(767)
+				width: 100%
+				margin-left: 0
+				margin-bottom: 20px
 
 // our_clients.html
 .clients
 	margin-left: -20px
 	padding-bottom: 270px
 	font-size: 0
+	+r(939)
+		margin-left: -15px
+	+r(767)
+		margin-left: 0
+		padding-bottom: 0
 	&__item
 		width: percentage(213/700)
 		padding: 25px
@@ -820,11 +960,16 @@
 		display: inline-block
 		vertical-align: top
 		+box
+		+r(939)
+			margin-left: 15px
+		+r(767)
+			width: 100%
+			margin-left: 0
+			margin-bottom: 20px
 		p
 			font-size: 14px
 			color: #333
 			padding-top: 20px
-
 
 // press_centre.html
 .main__title
