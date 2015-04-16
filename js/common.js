@@ -85,6 +85,19 @@ head.ready(function() {
 	  	});
 	 };
 
+	 // career input error
+	 $('body').on('click', function(event){
+	 	$(".help-block").removeClass('active');
+	 });
+
+	 $(".js-input-error").click(function(event) {
+	 	$(this).parent().find(".help-block").toggleClass("active");
+	 	event.preventDefault();
+	 	return false;
+	 });
+	 
+
+
 	// contact map
 	function initialize0() {
 	  var myLatlng0 = new google.maps.LatLng(50.447378, 30.523349);
