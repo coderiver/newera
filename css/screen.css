@@ -42,7 +42,7 @@ sup { vertical-align: top; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.header { background: url("../img/header_bg.jpg") no-repeat; background-size: cover; }
+.header { background: url("../img/header_bg.jpg") no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .header__in { padding: 25px 0; }
 @media only screen and (max-width: 939px) { .header__in { padding: 15px 0; } }
 .header__in .logo { float: left; width: 25.53191%; }
@@ -118,7 +118,7 @@ sup { vertical-align: top; }
 .mob-back { margin-left: -18px; font-weight: lighter; font-size: 22px; color: #FFF; }
 .mob-back i { margin-right: 10px; }
 
-.topper { background: radial-gradient(at top at top, #469e2c, #337823); color: #FFF; }
+.topper { background: -moz-radial-gradient(circle at top center, #469e2c 0%, #337823 100%); background: -webkit-radial-gradient(circle at top center, #469e2c 0%, #337823 100%); background: -o-radial-gradient(circle at top center, #469e2c 0%, #337823 100%); background: -ms-radial-gradient(circle at top center, #469e2c 0%, #337823 100%); background: radial-gradient(circle at top center, #469e2c 0%, #337823 100%); color: #FFF; }
 .topper__wrap { width: 53.19149%; margin: 0 auto; padding: 90px 0 165px; text-align: center; }
 @media only screen and (max-width: 767px) { .topper__wrap { width: 100%; padding: 5px 0 45px; } }
 .topper__wrap h2 { font-weight: lighter; font-size: 36px; }

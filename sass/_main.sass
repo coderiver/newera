@@ -2,7 +2,7 @@
 
 .header
 	background: url('../img/header_bg.jpg') no-repeat
-	background-size: cover
+	+cover
 	&__in
 		padding: 25px 0
 		+r(939)
@@ -262,7 +262,11 @@
 	i
 		margin-right: 10px					
 .topper
-	background: radial-gradient(at top, #469e2c, #337823)
+	background: -moz-radial-gradient(circle at top center, #469e2c 0%, #337823 100%)
+	background: -webkit-radial-gradient(circle at top center, #469e2c 0%, #337823 100%)
+	background: -o-radial-gradient(circle at top center, #469e2c 0%, #337823 100%)
+	background: -ms-radial-gradient(circle at top center, #469e2c 0%, #337823 100%)
+	background: radial-gradient(circle at top center, #469e2c 0%, #337823 100%)
 	color: #FFF 
 	&__wrap
 		width: percentage(500/940)
